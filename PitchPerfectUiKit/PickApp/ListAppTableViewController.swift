@@ -12,20 +12,21 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
     
     struct PhotoResources {
         static let photo1 = "RecordButton"
-        static let photo2 = "Echo"
-        static let photo3 = "Reverb"
+        static let defaultPhoto = "LowPitch"
     }
     
     struct AppNames {
         static let PITCH_PERFECT = "Pitch Perfect"
+        static let CLICK_COUNTER = "Click Counter"
         static let MEME_1 = "Meme 1.0"
         static let MEME_2 = "Meme 2.0"
     }
     
     struct SegueId {
         static let PITCH_PERFECT = "startRecording"
-        static let MEME_1 = "Meme 1.0"
-        static let MEME_2 = "Meme 2.0"
+        static let CLICK_COUNTER = "clickCounter"
+        static let MEME_1 = "Meme1"
+        static let MEME_2 = "Meme2"
     }
     
     let cellReuseIdentifier = "cell"
@@ -50,10 +51,11 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
         
         
         let app1 : AppName = AppName(name: AppNames.PITCH_PERFECT, image: UIImage(named: PhotoResources.photo1))
-        let app2 : AppName = AppName(name: AppNames.MEME_1, image: UIImage(named: PhotoResources.photo2))
-        let app3 : AppName = AppName(name: AppNames.MEME_2, image: UIImage(named: PhotoResources.photo3))
+        let app2 : AppName = AppName(name: AppNames.CLICK_COUNTER, image: UIImage(named: PhotoResources.defaultPhoto))
+        let app3 : AppName = AppName(name: AppNames.MEME_1, image: UIImage(named: PhotoResources.defaultPhoto))
+        let app4 : AppName = AppName(name: AppNames.MEME_2, image: UIImage(named: PhotoResources.defaultPhoto))
         
-        appNames += [app1, app2, app3]
+        appNames += [app1, app2, app3, app4]
     }
     
     // MARK: - Table view data source
@@ -84,8 +86,18 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
         tableView.deselectRow(at: indexPath, animated: false)
         
         if let cell = tableView.cellForRow(at: indexPath) as? AppViewCell {
-            if cell.appLabel?.text == AppNames.PITCH_PERFECT {
+            
+            switch cell.appLabel?.text {
+            case AppNames.PITCH_PERFECT:
                 performSegue(withIdentifier: SegueId.PITCH_PERFECT, sender: nil)
+            case AppNames.CLICK_COUNTER:
+                performSegue(withIdentifier: SegueId.CLICK_COUNTER, sender: nil)
+            case AppNames.MEME_1:
+                performSegue(withIdentifier: SegueId.MEME_1, sender: nil)
+            case AppNames.MEME_2:
+                performSegue(withIdentifier: SegueId.MEME_2, sender: nil)
+            default:
+                print("Unkonwn selection.")
             }
         }
     }

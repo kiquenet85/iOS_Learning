@@ -18,6 +18,7 @@
 		2879D526248339CB0047EEB0 /* AppViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879D525248339CB0047EEB0 /* AppViewCell.swift */; };
 		2879D52824833C630047EEB0 /* AppName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879D52724833C630047EEB0 /* AppName.swift */; };
 		2879D52A24834C570047EEB0 /* ListAppTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879D52924834C570047EEB0 /* ListAppTableViewController.swift */; };
+		2879D52E24838D3A0047EEB0 /* ClickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879D52D24838D3A0047EEB0 /* ClickViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		2879D525248339CB0047EEB0 /* AppViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewCell.swift; sourceTree = "<group>"; };
 		2879D52724833C630047EEB0 /* AppName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppName.swift; sourceTree = "<group>"; };
 		2879D52924834C570047EEB0 /* ListAppTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAppTableViewController.swift; sourceTree = "<group>"; };
+		2879D52D24838D3A0047EEB0 /* ClickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +68,9 @@
 		285ED8FF245E6D5400A39C19 /* PitchPerfectUiKit */ = {
 			isa = PBXGroup;
 			children = (
+				2879D52C24838CFB0047EEB0 /* ClickCounter */,
+				2879D52B24838CE00047EEB0 /* PitchPerfect */,
 				2879D524248339500047EEB0 /* PickApp */,
-				2879D522248339160047EEB0 /* RecorderAudio */,
-				2879D5232483392A0047EEB0 /* PlayerAudio */,
 				285ED900245E6D5400A39C19 /* AppDelegate.swift */,
 				285ED902245E6D5400A39C19 /* SceneDelegate.swift */,
 				285ED906245E6D5400A39C19 /* Main.storyboard */,
@@ -104,6 +106,23 @@
 				2879D52724833C630047EEB0 /* AppName.swift */,
 			);
 			path = PickApp;
+			sourceTree = "<group>";
+		};
+		2879D52B24838CE00047EEB0 /* PitchPerfect */ = {
+			isa = PBXGroup;
+			children = (
+				2879D522248339160047EEB0 /* RecorderAudio */,
+				2879D5232483392A0047EEB0 /* PlayerAudio */,
+			);
+			path = PitchPerfect;
+			sourceTree = "<group>";
+		};
+		2879D52C24838CFB0047EEB0 /* ClickCounter */ = {
+			isa = PBXGroup;
+			children = (
+				2879D52D24838D3A0047EEB0 /* ClickViewController.swift */,
+			);
+			path = ClickCounter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +199,7 @@
 				2879D526248339CB0047EEB0 /* AppViewCell.swift in Sources */,
 				285ED919246FD14800A39C19 /* PlaySoundsViewController+Audio.swift in Sources */,
 				285ED905245E6D5400A39C19 /* RecordSoundViewController.swift in Sources */,
+				2879D52E24838D3A0047EEB0 /* ClickViewController.swift in Sources */,
 				2879D52824833C630047EEB0 /* AppName.swift in Sources */,
 				285ED901245E6D5400A39C19 /* AppDelegate.swift in Sources */,
 				285ED917246E789000A39C19 /* PlaySoundViewController.swift in Sources */,

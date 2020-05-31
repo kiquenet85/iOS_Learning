@@ -257,11 +257,28 @@
                     <connections>
                         <outlet property="myTableView" destination="aGP-zJ-nM0" id="83E-ls-Yd4"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="startRecording" id="W3k-HF-eVW"/>
+                        <segue destination="Ly1-WW-TSh" kind="show" identifier="clickCounter" id="E5f-LA-f1S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcV-Ur-eCu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-23.188405797101453" y="153.34821428571428"/>
+        </scene>
+        <!--Click View Controller-->
+        <scene sceneID="g6O-mD-nDM">
+            <objects>
+                <viewController id="Ly1-WW-TSh" customClass="ClickViewController" customModule="PitchPerfectUiKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bRp-YI-nVT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ncs-Vk-ooy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qiu-sn-dqD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOA-fd-98N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1339" y="873"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j4G-KV-fua">
