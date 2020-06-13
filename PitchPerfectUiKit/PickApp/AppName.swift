@@ -13,7 +13,7 @@ struct AppName {
     var name : String
     var photo: UIImage?
     
-    init(name: String, image: UIImage?) {
+    init(name: String, image: UIImage? = UIImage(named: ListAppTableViewController.PhotoResources.defaultPhoto)) {
         self.name = name
         self.photo = image
     }
