@@ -19,6 +19,7 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
         static let PITCH_PERFECT = "Pitch Perfect"
         static let CLICK_COUNTER = "Click Counter"
         static let CLICK_SWITCHER = "Click Switcher"
+        static let MODAL_NAVIGATION = "Modal Navigation"
         static let MEME_1 = "Meme 1.0"
         static let MEME_2 = "Meme 2.0"
     }
@@ -27,6 +28,7 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
         static let PITCH_PERFECT = "startRecording"
         static let CLICK_COUNTER = "clickCounter"
         static let COLOR_SWITCHER = "clickColorSwitcher"
+        static let MODAL_NAVIGATION = "clickModalNav"
         static let MEME_1 = "Meme1"
         static let MEME_2 = "Meme2"
     }
@@ -54,10 +56,11 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
         let app1 : AppName = AppName(name: AppNames.PITCH_PERFECT, image: UIImage(named: PhotoResources.photo1))
         let app2 : AppName = AppName(name: AppNames.CLICK_COUNTER, image: UIImage(named: PhotoResources.defaultPhoto))
         let app3 : AppName = AppName(name: AppNames.CLICK_SWITCHER)
-        let app4 : AppName = AppName(name: AppNames.MEME_1, image: UIImage(named: PhotoResources.defaultPhoto))
-        let app5 : AppName = AppName(name: AppNames.MEME_2, image: UIImage(named: PhotoResources.defaultPhoto))
+        let app4 : AppName = AppName(name: AppNames.MODAL_NAVIGATION)
+        let app5 : AppName = AppName(name: AppNames.MEME_1, image: UIImage(named: PhotoResources.defaultPhoto))
+        let app6 : AppName = AppName(name: AppNames.MEME_2, image: UIImage(named: PhotoResources.defaultPhoto))
         
-        appNames += [app1, app2, app3, app4, app5]
+        appNames += [app1, app2, app3, app4, app5, app6]
     }
     
     // MARK: - Table view data source
@@ -96,6 +99,8 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
                 performSegue(withIdentifier: SegueId.CLICK_COUNTER, sender: nil)
             case AppNames.CLICK_SWITCHER:
                 performSegue(withIdentifier: SegueId.COLOR_SWITCHER, sender: nil)
+            case AppNames.MODAL_NAVIGATION:
+                performSegue(withIdentifier: SegueId.MODAL_NAVIGATION, sender: nil)
             case AppNames.MEME_1:
                 performSegue(withIdentifier: SegueId.MEME_1, sender: nil)
             case AppNames.MEME_2:
