@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wP4-wb-q7V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wP4-wb-q7V">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -211,7 +211,7 @@
                                                                 <constraint firstAttribute="width" constant="100" id="EvD-q1-YHy"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEstor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFl-lE-ORE">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEstor  App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFl-lE-ORE">
                                                             <rect key="frame" x="100" y="0.0" width="314" height="90"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -258,6 +258,7 @@
                         <outlet property="myTableView" destination="aGP-zJ-nM0" id="83E-ls-Yd4"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="startRecording" id="W3k-HF-eVW"/>
                         <segue destination="Ly1-WW-TSh" kind="show" identifier="clickCounter" id="E5f-LA-f1S"/>
+                        <segue destination="E23-pg-ghg" kind="show" id="rul-LT-YDr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcV-Ur-eCu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -271,14 +272,60 @@
                     <view key="view" contentMode="scaleToFill" id="bRp-YI-nVT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyf-kh-0UA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="De9-QI-PUQ">
+                                <rect key="frame" x="0.0" y="109" width="414" height="453"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="incrementCountEditor" destination="Ly1-WW-TSh" eventType="touchUpInside" id="Gvh-qv-Aip"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Dyf-kh-0UA" firstAttribute="leading" secondItem="Ncs-Vk-ooy" secondAttribute="leading" id="2CS-mu-wOk"/>
+                            <constraint firstItem="Ncs-Vk-ooy" firstAttribute="trailing" secondItem="Dyf-kh-0UA" secondAttribute="trailing" id="Ede-Rr-agY"/>
+                            <constraint firstItem="Dyf-kh-0UA" firstAttribute="leading" secondItem="Ncs-Vk-ooy" secondAttribute="leading" id="Ezb-7K-QCs"/>
+                            <constraint firstItem="Ncs-Vk-ooy" firstAttribute="trailing" secondItem="De9-QI-PUQ" secondAttribute="trailing" id="Urd-aE-X3F"/>
+                            <constraint firstItem="Dyf-kh-0UA" firstAttribute="top" secondItem="Ncs-Vk-ooy" secondAttribute="top" id="VZR-eG-ThG"/>
+                            <constraint firstItem="Ncs-Vk-ooy" firstAttribute="bottom" secondItem="De9-QI-PUQ" secondAttribute="bottom" constant="300" id="lNJ-Yt-hz2"/>
+                            <constraint firstItem="De9-QI-PUQ" firstAttribute="leading" secondItem="Ncs-Vk-ooy" secondAttribute="leading" id="mdv-X3-Ces"/>
+                            <constraint firstItem="De9-QI-PUQ" firstAttribute="top" secondItem="Dyf-kh-0UA" secondAttribute="bottom" id="nQf-y8-aAU"/>
+                            <constraint firstItem="Ncs-Vk-ooy" firstAttribute="trailing" secondItem="Dyf-kh-0UA" secondAttribute="trailing" id="zOy-fe-PpY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ncs-Vk-ooy"/>
                     </view>
                     <navigationItem key="navigationItem" id="qiu-sn-dqD"/>
+                    <connections>
+                        <outlet property="editorButton" destination="De9-QI-PUQ" id="LUu-GU-vdW"/>
+                        <outlet property="editorLabel" destination="Dyf-kh-0UA" id="4La-iF-I9h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IOA-fd-98N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1339" y="873"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zN8-n8-XX4">
+            <objects>
+                <viewController id="E23-pg-ghg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WAv-GI-qZl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ng6-ME-ez5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LeU-ig-qAt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EIQ-aV-pRq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-484" y="879"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j4G-KV-fua">

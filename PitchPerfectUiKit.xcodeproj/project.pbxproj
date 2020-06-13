@@ -49,6 +49,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28481252249476EE00636198 /* Color Switches */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Color Switches";
+			sourceTree = "<group>";
+		};
 		285ED8F4245E6D5400A39C19 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +75,7 @@
 		285ED8FF245E6D5400A39C19 /* PitchPerfectUiKit */ = {
 			isa = PBXGroup;
 			children = (
+				28481252249476EE00636198 /* Color Switches */,
 				2879D52C24838CFB0047EEB0 /* ClickCounter */,
 				2879D52B24838CE00047EEB0 /* PitchPerfect */,
 				2879D524248339500047EEB0 /* PickApp */,

@@ -49,7 +49,6 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
     
     private func loadAppNames(){
         
-        
         let app1 : AppName = AppName(name: AppNames.PITCH_PERFECT, image: UIImage(named: PhotoResources.photo1))
         let app2 : AppName = AppName(name: AppNames.CLICK_COUNTER, image: UIImage(named: PhotoResources.defaultPhoto))
         let app3 : AppName = AppName(name: AppNames.MEME_1, image: UIImage(named: PhotoResources.defaultPhoto))

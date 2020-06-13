@@ -10,6 +10,11 @@ import UIKit
 
 class ClickViewController: UIViewController {
     
+    //MARK: Editor Variables
+    @IBOutlet var editorLabel : UILabel!
+    @IBOutlet var editorButton : UIButton!
+    
+    //MARK: Programatically variables.
     var ccLabel : UILabel!
     var ccSecondLabel : UILabel!
     var count = 0
@@ -17,9 +22,18 @@ class ClickViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        buildProgramatically()
+        //buildProgramatically()
     }
     
+    @IBAction func incrementCountEditor(){
+        self.count += 1
+        self.editorLabel.text = "\(count)"
+    }
+    
+    /**
+       This code was made completely programatic.
+        Even for creating connections with the view controller.
+     */
     func buildProgramatically(){
         ccLabel = UILabel()
         ccLabel.frame = CGRect(x: 150, y: 150, width: 60, height: 60)
