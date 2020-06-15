@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		284812542494777B00636198 /* ColorSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284812532494777B00636198 /* ColorSwitchViewController.swift */; };
 		284812572494A04D00636198 /* ModalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284812562494A04D00636198 /* ModalsViewController.swift */; };
+		2848125A24955FEA00636198 /* GameRSPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848125924955FEA00636198 /* GameRSPViewController.swift */; };
+		2848125C2495F06F00636198 /* ResultsRSPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848125B2495F06F00636198 /* ResultsRSPViewController.swift */; };
 		285ED901245E6D5400A39C19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285ED900245E6D5400A39C19 /* AppDelegate.swift */; };
 		285ED903245E6D5400A39C19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285ED902245E6D5400A39C19 /* SceneDelegate.swift */; };
 		285ED905245E6D5400A39C19 /* RecordSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285ED904245E6D5400A39C19 /* RecordSoundViewController.swift */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		284812532494777B00636198 /* ColorSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwitchViewController.swift; sourceTree = "<group>"; };
 		284812562494A04D00636198 /* ModalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalsViewController.swift; sourceTree = "<group>"; };
+		2848125924955FEA00636198 /* GameRSPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRSPViewController.swift; sourceTree = "<group>"; };
+		2848125B2495F06F00636198 /* ResultsRSPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsRSPViewController.swift; sourceTree = "<group>"; };
 		285ED8FD245E6D5400A39C19 /* PitchPerfectUiKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfectUiKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		285ED900245E6D5400A39C19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		285ED902245E6D5400A39C19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,15 @@
 			path = ModalsViewController;
 			sourceTree = "<group>";
 		};
+		2848125824955F9E00636198 /* RockScissorsPaper */ = {
+			isa = PBXGroup;
+			children = (
+				2848125924955FEA00636198 /* GameRSPViewController.swift */,
+				2848125B2495F06F00636198 /* ResultsRSPViewController.swift */,
+			);
+			path = RockScissorsPaper;
+			sourceTree = "<group>";
+		};
 		285ED8F4245E6D5400A39C19 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +101,7 @@
 		285ED8FF245E6D5400A39C19 /* PitchPerfectUiKit */ = {
 			isa = PBXGroup;
 			children = (
+				2848125824955F9E00636198 /* RockScissorsPaper */,
 				284812552494A01200636198 /* ModalsViewController */,
 				28481252249476EE00636198 /* ColorSwitcher */,
 				2879D52C24838CFB0047EEB0 /* ClickCounter */,
@@ -221,11 +235,13 @@
 				2879D526248339CB0047EEB0 /* AppViewCell.swift in Sources */,
 				285ED919246FD14800A39C19 /* PlaySoundsViewController+Audio.swift in Sources */,
 				285ED905245E6D5400A39C19 /* RecordSoundViewController.swift in Sources */,
+				2848125C2495F06F00636198 /* ResultsRSPViewController.swift in Sources */,
 				2879D52E24838D3A0047EEB0 /* ClickViewController.swift in Sources */,
 				284812572494A04D00636198 /* ModalsViewController.swift in Sources */,
 				2879D52824833C630047EEB0 /* AppName.swift in Sources */,
 				285ED901245E6D5400A39C19 /* AppDelegate.swift in Sources */,
 				285ED917246E789000A39C19 /* PlaySoundViewController.swift in Sources */,
+				2848125A24955FEA00636198 /* GameRSPViewController.swift in Sources */,
 				2879D52A24834C570047EEB0 /* ListAppTableViewController.swift in Sources */,
 				284812542494777B00636198 /* ColorSwitchViewController.swift in Sources */,
 				285ED903245E6D5400A39C19 /* SceneDelegate.swift in Sources */,
