@@ -139,11 +139,15 @@ class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     //MARK: Observing keyboard methods
     @objc func keyboardWillShow(_ notification:Notification){
-        view.frame.origin.y = -getKeyboardHeight(notification)
+        if !topText.isEditing {
+            view.frame.origin.y = -getKeyboardHeight(notification)
+        }
     }
     
     @objc func keyboardWillHide(_ notification:Notification){
-        view.frame.origin.y = 0
+        if view.frame.origin.y != 0 {
+            view.frame.origin.y = 0
+        }
     }
     
     func subscribeToKeyboardNotifications(){
