@@ -613,6 +613,7 @@
                                     <constraint firstAttribute="height" constant="44" id="hYi-4k-0NM"/>
                                 </constraints>
                                 <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4pP-UL-kc8"/>
                                     <barButtonItem title="Take Photo" id="tgI-ec-wCe" userLabel="TakePhoto">
                                         <connections>
                                             <action selector="pickAnImageFromCamera" destination="h4j-Vo-Su4" id="x83-0f-1tQ"/>
@@ -623,15 +624,18 @@
                                             <action selector="pickAlbumPicture:" destination="h4j-Vo-Su4" id="XdK-2Z-CXq"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mc5-xV-dst"/>
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7NX-38-JrT">
                                 <rect key="frame" x="16" y="104" width="382" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nI8-Ng-491">
                                 <rect key="frame" x="16" y="768" width="382" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -654,11 +658,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Vd-eS-Yju"/>
                     </view>
-                    <navigationItem key="navigationItem" id="AYb-x3-DLy"/>
                     <connections>
                         <outlet property="bottomText" destination="nI8-Ng-491" id="wDf-EJ-BE0"/>
                         <outlet property="cameraBtn" destination="tgI-ec-wCe" id="bV4-uG-v0W"/>
                         <outlet property="imgMeme" destination="XCu-lU-jGh" id="Glj-TT-AIc"/>
+                        <outlet property="toolbar" destination="6bs-3s-u63" id="RWy-Ed-5cR"/>
                         <outlet property="topText" destination="7NX-38-JrT" id="V3d-bA-eI4"/>
                     </connections>
                 </viewController>

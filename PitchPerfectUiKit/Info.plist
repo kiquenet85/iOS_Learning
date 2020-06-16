@@ -4,6 +4,8 @@
 <dict>
 	<key>NSCameraUsageDescription</key>
 	<string>In order to create the MEME , application need access to images files.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>We need to save meme photos you created.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

@@ -23,4 +23,5 @@ class MemeEditTextDelegate: NSObject, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
 }
