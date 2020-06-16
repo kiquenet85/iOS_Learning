@@ -10,6 +10,7 @@ import UIKit
 
 class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    //MARK: IBOutlets
     @IBOutlet weak var imgMeme: UIImageView!
     @IBOutlet weak var cameraBtn: UIBarButtonItem!
     
@@ -17,7 +18,6 @@ class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var bottomText: UITextField!
     
     @IBOutlet weak var toolbar: UIToolbar!
-    
     
     //MARK: Edit text variables
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
@@ -34,6 +34,7 @@ class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, 
         static let DEFAULT_BOTTOM_TEXT = "BOTTOM"
     }
     
+    //MARK: ViewController lifecycle.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,6 +69,7 @@ class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, 
         unsubscribeFromKeyboardNotifications()
     }
     
+    //MARK: Camera and Album
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         
