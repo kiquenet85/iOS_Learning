@@ -662,7 +662,7 @@
                     <connections>
                         <outlet property="bottomText" destination="nI8-Ng-491" id="wDf-EJ-BE0"/>
                         <outlet property="cameraBtn" destination="tgI-ec-wCe" id="bV4-uG-v0W"/>
-                        <outlet property="imgMeme" destination="XCu-lU-jGh" id="Glj-TT-AIc"/>
+                        <outlet property="imgOriginal" destination="XCu-lU-jGh" id="Glj-TT-AIc"/>
                         <outlet property="toolbar" destination="6bs-3s-u63" id="RWy-Ed-5cR"/>
                         <outlet property="topText" destination="7NX-38-JrT" id="V3d-bA-eI4"/>
                     </connections>

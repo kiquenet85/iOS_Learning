@@ -10,8 +10,10 @@ import UIKit
 
 class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var memedImg: UIImage? = nil
+    
     //MARK: IBOutlets
-    @IBOutlet weak var imgMeme: UIImageView!
+    @IBOutlet weak var imgOriginal: UIImageView!
     @IBOutlet weak var cameraBtn: UIBarButtonItem!
     
     @IBOutlet weak var topText: UITextField!
@@ -79,7 +81,7 @@ class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
         
         // set the image with selected resource
-        imgMeme.image = image
+        imgOriginal.image = image
         navigationItem.rightBarButtonItems?[0].isEnabled = true
     }
     
@@ -108,8 +110,23 @@ class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     //MARK: Share Meme image.
     @objc func shareTapped(){
-        let activityVC = UIActivityViewController(activityItems: [generateMemedImage()], applicationActivities: [])
+        memedImg = generateMemedImage()
+        let activityVC = UIActivityViewController(activityItems: [memedImg!], applicationActivities: [])
         activityVC.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItems?[0]
+        
+        activityVC.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed:
+            Bool, arrayReturnedItems: [Any]?, error: Error?) in
+            if completed {
+                activityVC.dismiss(animated: true, completion: nil)
+                self.save()
+                return
+            } else {
+                print("service was cancelled cancel")
+            }
+            if let shareError = error {
+                print("error while sharing: \(shareError.localizedDescription)")
+            }
+        }
         
         present(activityVC, animated: true)
     }
@@ -119,7 +136,6 @@ class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         isHiddenNavBarAdtoolbar(hide: true)
         
-        var meme = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: imgMeme.image, memedImage: nil)
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
@@ -128,8 +144,11 @@ class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         isHiddenNavBarAdtoolbar(hide: false)
         
-        meme.memedImage = memedImage
         return memedImage
+    }
+    
+    func save() {
+        var meme = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: imgOriginal.image, memedImage: memedImg!.images?.first)
     }
     
     func isHiddenNavBarAdtoolbar(hide : Bool){
