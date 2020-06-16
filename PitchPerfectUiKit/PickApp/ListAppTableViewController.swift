@@ -44,6 +44,7 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "Learning iOS apps";
         // (optional) include this line if you want to remove the extra empty cell divider lines
         // self.tableView.tableFooterView = UIView()
         
@@ -110,7 +111,17 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
             case AppNames.MEME_1:
                 performSegue(withIdentifier: SegueId.MEME_1, sender: nil)
             case AppNames.MEME_2:
-                performSegue(withIdentifier: SegueId.MEME_2, sender: nil)
+                //performSegue(withIdentifier: SegueId.MEME_2, sender: nil)
+                let alertcontroller = UIAlertController()
+                alertcontroller.title = "MEME 2"
+                alertcontroller.message = "NOT Implemented Yet"
+                
+                let okAction = UIAlertAction(title: "ok", style: UIAlertAction.Style.default) { action in
+                    self.dismiss(animated: true, completion: nil)
+                }
+                
+                alertcontroller.addAction(okAction)
+                present(alertcontroller, animated: true, completion: nil)
             default:
                 print("Unkonwn selection.")
             }
