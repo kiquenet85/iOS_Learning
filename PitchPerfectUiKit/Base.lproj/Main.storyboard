@@ -587,34 +587,84 @@
             </objects>
             <point key="canvasLocation" x="870" y="1069"/>
         </scene>
-        <!--View Controller-->
+        <!--Meme One View Controller-->
         <scene sceneID="c3T-qo-7tj">
             <objects>
-                <viewController id="h4j-Vo-Su4" sceneMemberID="viewController">
+                <viewController id="h4j-Vo-Su4" customClass="MemeOneViewController" customModule="PitchPerfectUiKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0n6-e4-vtn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bs-3s-u63">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3do-W1-lsG">
+                                <rect key="frame" x="16" y="88" width="382" height="730"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XCu-lU-jGh">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="730"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XCu-lU-jGh" secondAttribute="trailing" id="57X-Ro-6d6"/>
+                                    <constraint firstItem="XCu-lU-jGh" firstAttribute="leading" secondItem="3do-W1-lsG" secondAttribute="leading" id="Boo-gA-eno"/>
+                                </constraints>
+                            </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bs-3s-u63" userLabel="ToolbarPickImage">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hYi-4k-0NM"/>
+                                </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="tgI-ec-wCe"/>
+                                    <barButtonItem title="Take Photo" id="tgI-ec-wCe" userLabel="TakePhoto">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera" destination="h4j-Vo-Su4" id="x83-0f-1tQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Pick" id="mGc-1A-BOa">
+                                        <connections>
+                                            <action selector="pickAlbumPicture:" destination="h4j-Vo-Su4" id="XdK-2Z-CXq"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7NX-38-JrT">
+                                <rect key="frame" x="16" y="104" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nI8-Ng-491">
+                                <rect key="frame" x="16" y="768" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="6bs-3s-u63" firstAttribute="leading" secondItem="8Vd-eS-Yju" secondAttribute="leading" id="2uE-PL-8Hu"/>
-                            <constraint firstItem="6bs-3s-u63" firstAttribute="bottom" secondItem="8Vd-eS-Yju" secondAttribute="bottom" id="5gY-HT-XiM"/>
-                            <constraint firstItem="6bs-3s-u63" firstAttribute="trailing" secondItem="8Vd-eS-Yju" secondAttribute="trailing" id="cUi-pV-T7H"/>
+                            <constraint firstItem="3do-W1-lsG" firstAttribute="leading" secondItem="0n6-e4-vtn" secondAttribute="leading" constant="16" id="5h1-Fy-Pzj"/>
+                            <constraint firstItem="7NX-38-JrT" firstAttribute="top" secondItem="8Vd-eS-Yju" secondAttribute="top" constant="16" id="9xj-rv-gC2"/>
+                            <constraint firstItem="nI8-Ng-491" firstAttribute="trailing" secondItem="XCu-lU-jGh" secondAttribute="trailing" id="Al2-g1-MSM"/>
+                            <constraint firstItem="6bs-3s-u63" firstAttribute="leading" secondItem="8Vd-eS-Yju" secondAttribute="leading" id="IHE-JW-Ywe"/>
+                            <constraint firstItem="3do-W1-lsG" firstAttribute="trailing" secondItem="8Vd-eS-Yju" secondAttribute="trailing" constant="-16" id="OJt-5a-AzB"/>
+                            <constraint firstItem="6bs-3s-u63" firstAttribute="top" secondItem="3do-W1-lsG" secondAttribute="bottom" id="SLi-mx-kVb"/>
+                            <constraint firstItem="8Vd-eS-Yju" firstAttribute="bottom" secondItem="6bs-3s-u63" secondAttribute="bottom" id="Sa1-sr-K6E"/>
+                            <constraint firstItem="8Vd-eS-Yju" firstAttribute="trailing" secondItem="6bs-3s-u63" secondAttribute="trailing" id="ULZ-ws-rXK"/>
+                            <constraint firstItem="nI8-Ng-491" firstAttribute="leading" secondItem="XCu-lU-jGh" secondAttribute="leading" id="bJS-5u-74a"/>
+                            <constraint firstItem="7NX-38-JrT" firstAttribute="leading" secondItem="XCu-lU-jGh" secondAttribute="leading" id="gs9-6W-PyJ"/>
+                            <constraint firstItem="6bs-3s-u63" firstAttribute="top" secondItem="nI8-Ng-491" secondAttribute="bottom" constant="16" id="jC6-JC-Du0"/>
+                            <constraint firstItem="7NX-38-JrT" firstAttribute="trailing" secondItem="XCu-lU-jGh" secondAttribute="trailing" id="vzS-ti-g3U"/>
+                            <constraint firstItem="3do-W1-lsG" firstAttribute="top" secondItem="8Vd-eS-Yju" secondAttribute="top" id="xvg-mO-3QC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Vd-eS-Yju"/>
                     </view>
                     <navigationItem key="navigationItem" id="AYb-x3-DLy"/>
+                    <connections>
+                        <outlet property="bottomText" destination="nI8-Ng-491" id="wDf-EJ-BE0"/>
+                        <outlet property="cameraBtn" destination="tgI-ec-wCe" id="bV4-uG-v0W"/>
+                        <outlet property="imgMeme" destination="XCu-lU-jGh" id="Glj-TT-AIc"/>
+                        <outlet property="topText" destination="7NX-38-JrT" id="V3d-bA-eI4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMa-Fs-AXy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928" y="153"/>
+            <point key="canvasLocation" x="927.536231884058" y="152.67857142857142"/>
         </scene>
         <!--ResultsRSP View Controller-->
         <scene sceneID="oLV-hz-gXs">
