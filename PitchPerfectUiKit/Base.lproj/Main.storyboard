@@ -260,8 +260,8 @@
                         <segue destination="Ly1-WW-TSh" kind="show" identifier="clickCounter" id="E5f-LA-f1S"/>
                         <segue destination="E23-pg-ghg" kind="show" identifier="clickColorSwitcher" id="rul-LT-YDr"/>
                         <segue destination="Tkk-JF-yEO" kind="show" identifier="clickModalNav" id="Qdu-Nu-2cj"/>
-                        <segue destination="lhq-R6-UDT" kind="show" identifier="clickRSP" id="I7t-Ut-Pew"/>
                         <segue destination="h4j-Vo-Su4" kind="show" identifier="Meme1" id="MmI-Bc-vYU"/>
+                        <segue destination="lhq-R6-UDT" kind="show" identifier="clickRSP" id="66E-Tr-g0A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcV-Ur-eCu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -554,17 +554,17 @@
                                                 </constraints>
                                                 <state key="normal" backgroundImage="scissors"/>
                                                 <connections>
-                                                    <action selector="selectedScissors:" destination="lhq-R6-UDT" eventType="touchUpInside" id="JXW-pb-DAJ"/>
-                                                    <segue destination="yI2-iE-MVN" kind="presentation" identifier="GameResults" id="8x6-8G-EW7"/>
+                                                    <action selector="selectedScissors:" destination="lhq-R6-UDT" eventType="touchUpInside" id="cUj-fa-LyK"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfd-8u-STq">
-                                        <rect key="frame" x="117.5" y="250" width="65" height="30"/>
-                                        <state key="normal" title="Let's play"/>
+                                        <rect key="frame" x="104.5" y="250" width="91" height="30"/>
+                                        <state key="normal" title="Show History"/>
                                         <connections>
-                                            <action selector="incorrectSegueLetsPlay" destination="lhq-R6-UDT" eventType="touchUpInside" id="xsO-Kq-cRd"/>
+                                            <action selector="showPlayHistory" destination="lhq-R6-UDT" eventType="touchUpInside" id="xsO-Kq-cRd"/>
+                                            <segue destination="jyD-0w-FWZ" kind="presentation" identifier="showHistoryRSP" id="pSe-sV-Wn0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -579,9 +579,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="FfU-Eb-t2i"/>
                     <connections>
+                        <outlet property="checkHistoryBtn" destination="rfd-8u-STq" id="CJT-aD-ffd"/>
                         <outlet property="paperBtn" destination="gV3-2e-aL4" id="tZp-Dg-jvY"/>
                         <outlet property="rockBtn" destination="DOQ-lS-Pqf" id="WLO-1o-gZb"/>
                         <outlet property="scissorsBtn" destination="dXX-1x-d8Z" id="ohO-jQ-nDi"/>
+                        <segue destination="yI2-iE-MVN" kind="presentation" identifier="GameResults" id="kAt-EW-8Ql"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J9O-Nh-YDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -680,34 +682,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="01F-SC-C0h">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="01F-SC-C0h">
+                                <rect key="frame" x="86.5" y="277.5" width="241" height="287.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9i-UP-znz">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="21.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9i-UP-znz">
+                                        <rect key="frame" x="99.5" y="0.0" width="42" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n2H-eA-STL">
-                                        <rect key="frame" x="0.0" y="21.5" width="414" height="755"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="241" height="217"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="n2H-eA-STL" secondAttribute="height" multiplier="241:217" id="eSz-c0-cYs"/>
+                                        </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ale-Cr-Io9">
-                                        <rect key="frame" x="0.0" y="776.5" width="414" height="31.5"/>
+                                        <rect key="frame" x="93.5" y="257.5" width="54" height="30"/>
                                         <state key="normal" title="Dismiss"/>
                                         <connections>
                                             <action selector="dismissOnModal" destination="yI2-iE-MVN" eventType="touchUpInside" id="Yab-iT-TKp"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ale-Cr-Io9" firstAttribute="top" secondItem="n2H-eA-STL" secondAttribute="bottom" constant="10" id="E3w-iu-XNc"/>
+                                    <constraint firstItem="n2H-eA-STL" firstAttribute="top" secondItem="G9i-UP-znz" secondAttribute="bottom" constant="10" id="LFb-tq-wfo"/>
+                                    <constraint firstItem="n2H-eA-STL" firstAttribute="top" secondItem="G9i-UP-znz" secondAttribute="bottom" constant="10" id="gZ2-zo-Ybf"/>
+                                    <constraint firstItem="Ale-Cr-Io9" firstAttribute="top" secondItem="n2H-eA-STL" secondAttribute="bottom" constant="10" id="peF-MT-tDB"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="RCB-jf-lTE" firstAttribute="bottom" secondItem="01F-SC-C0h" secondAttribute="bottom" id="6td-IG-KDU"/>
-                            <constraint firstItem="01F-SC-C0h" firstAttribute="top" secondItem="RCB-jf-lTE" secondAttribute="top" id="du8-jW-xu7"/>
-                            <constraint firstItem="01F-SC-C0h" firstAttribute="leading" secondItem="RCB-jf-lTE" secondAttribute="leading" id="h8f-ax-KOS"/>
-                            <constraint firstItem="RCB-jf-lTE" firstAttribute="trailing" secondItem="01F-SC-C0h" secondAttribute="trailing" id="y1v-Ms-K5e"/>
+                            <constraint firstItem="01F-SC-C0h" firstAttribute="centerX" secondItem="ZWq-m5-iA2" secondAttribute="centerX" id="K5x-um-bSa"/>
+                            <constraint firstItem="01F-SC-C0h" firstAttribute="centerY" secondItem="ZWq-m5-iA2" secondAttribute="centerY" id="x8x-rJ-f0N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RCB-jf-lTE"/>
                     </view>
@@ -721,6 +731,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALO-Yn-jDS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="869.56521739130437" y="1800.6696428571427"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="nLs-pI-4Vk">
+            <objects>
+                <viewController id="jyD-0w-FWZ" customClass="HistoryViewController" customModule="PitchPerfectUiKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Epe-7S-uzQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rev-uf-p0p">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoryCell" id="VVS-x5-jSE">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VVS-x5-jSE" id="O5G-66-6zN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jyD-0w-FWZ" id="fGY-Hh-ZPo"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GbY-Vy-q14" firstAttribute="trailing" secondItem="rev-uf-p0p" secondAttribute="trailing" id="Ihp-ka-BzP"/>
+                            <constraint firstItem="rev-uf-p0p" firstAttribute="top" secondItem="GbY-Vy-q14" secondAttribute="top" id="Jp1-Gd-fdc"/>
+                            <constraint firstItem="GbY-Vy-q14" firstAttribute="bottom" secondItem="rev-uf-p0p" secondAttribute="bottom" id="UKF-Bh-oTl"/>
+                            <constraint firstItem="rev-uf-p0p" firstAttribute="leading" secondItem="GbY-Vy-q14" secondAttribute="leading" id="mhb-aK-NVJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GbY-Vy-q14"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IAq-qD-j2O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="1807"/>
         </scene>
     </scenes>
     <resources>

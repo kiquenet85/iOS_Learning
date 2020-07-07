@@ -19,6 +19,7 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
         static let RECORD_IMG = "RecordButton"
         static let DEFAULT_PHOTO = "LowPitch"
         static let MEME_ONE = "Meme"
+        static let ROCK_SCISSORS_PAPER = "ScissorsCutPaper"
     }
     
     struct AppNames {
@@ -66,7 +67,7 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
         let app2 : AppName = AppName(name: AppNames.CLICK_COUNTER, image: UIImage(named: PhotoResources.DEFAULT_PHOTO))
         let app3 : AppName = AppName(name: AppNames.CLICK_SWITCHER)
         let app4 : AppName = AppName(name: AppNames.MODAL_NAVIGATION)
-        let app5 : AppName = AppName(name: AppNames.ROCK_SCISSORS_PAPER)
+        let app5 : AppName = AppName(name: AppNames.ROCK_SCISSORS_PAPER, image: UIImage(named: PhotoResources.ROCK_SCISSORS_PAPER))
         let app6 : AppName = AppName(name: AppNames.MEME_1, image: UIImage(named: PhotoResources.MEME_ONE))
         let app7 : AppName = AppName(name: AppNames.MEME_2, image: UIImage(named: PhotoResources.DEFAULT_PHOTO))
         

@@ -8,11 +8,51 @@
 
 import Foundation
 
+struct HistoryGame {
+    let winner: RSPGame.Winner
+    let play: RSPGame.Play
+    
+    init(winner: RSPGame.Winner, play: RSPGame.Play) {
+        self.winner = winner
+        self.play = play
+    }
+    
+    func getDetail() -> String {
+        var result = ""
+        switch winner {
+            
+        case .PLAYER:
+            result.append(contentsOf: "Player won")
+        case .SYSTEM:
+            result.append(contentsOf: "Player loosed")
+        case .PARITY:
+            result.append(contentsOf: "It was a tie")
+        }
+        
+        switch play {
+        case .ROCK:
+              result.append(contentsOf: " using ROCK")
+        case .SCISSOR:
+              result.append(contentsOf: " using SCISSOR")
+        case .PAPER:
+              result.append(contentsOf: " using PAPER")
+        case .ROCK_OVER_SCISSOR:
+              result.append(contentsOf: " using ROCK_OVER_SCISSOR")
+        case .SCISSOR_OVER_PAPER:
+              result.append(contentsOf: " using SCISSOR_OVER_PAPER")
+        case .PAPER_OVER_ROCK:
+              result.append(contentsOf: " using PAPER_OVER_ROCK")
+        }
+        return result
+    }
+}
+
 class RSPGame {
     
     let prefixImagePath = #"GameRSP/"#
     var winner = Winner.PARITY
     var detailPlayed = Play.ROCK
+    var historyGame: [HistoryGame] = []
     
     enum Winner {
         case PLAYER, SYSTEM, PARITY
@@ -79,5 +119,6 @@ class RSPGame {
                 self.detailPlayed = Play.PAPER_OVER_ROCK
             }
         }
+        historyGame.insert(HistoryGame(winner: self.winner, play: self.detailPlayed), at: historyGame.count)
     }
 }

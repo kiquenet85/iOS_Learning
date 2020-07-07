@@ -27,6 +27,7 @@
 		2879D52A24834C570047EEB0 /* ListAppTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879D52924834C570047EEB0 /* ListAppTableViewController.swift */; };
 		2879D52E24838D3A0047EEB0 /* ClickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879D52D24838D3A0047EEB0 /* ClickViewController.swift */; };
 		288D6B9C24B2DE35000D3212 /* ModelGameRSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6B9B24B2DE35000D3212 /* ModelGameRSP.swift */; };
+		288D6B9E24B40137000D3212 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6B9D24B40137000D3212 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		2879D52924834C570047EEB0 /* ListAppTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAppTableViewController.swift; sourceTree = "<group>"; };
 		2879D52D24838D3A0047EEB0 /* ClickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickViewController.swift; sourceTree = "<group>"; };
 		288D6B9B24B2DE35000D3212 /* ModelGameRSP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelGameRSP.swift; sourceTree = "<group>"; };
+		288D6B9D24B40137000D3212 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				2848125924955FEA00636198 /* GameRSPViewController.swift */,
 				2848125B2495F06F00636198 /* ResultsRSPViewController.swift */,
 				288D6B9B24B2DE35000D3212 /* ModelGameRSP.swift */,
+				288D6B9D24B40137000D3212 /* HistoryViewController.swift */,
 			);
 			path = RockScissorsPaper;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				285ED917246E789000A39C19 /* PlaySoundViewController.swift in Sources */,
 				2848125A24955FEA00636198 /* GameRSPViewController.swift in Sources */,
 				2879D52A24834C570047EEB0 /* ListAppTableViewController.swift in Sources */,
+				288D6B9E24B40137000D3212 /* HistoryViewController.swift in Sources */,
 				284812542494777B00636198 /* ColorSwitchViewController.swift in Sources */,
 				285ED903245E6D5400A39C19 /* SceneDelegate.swift in Sources */,
 			);

@@ -18,13 +18,16 @@ class GameRSPViewController: UIViewController {
     
     struct SegueIds{
         static let GAME_RESULTS = "GameResults"
+        static let GAME_HISTORY = "showHistoryRSP"
     }
     
     @IBOutlet weak var rockBtn: UIButton!
     @IBOutlet weak var paperBtn: UIButton!
     @IBOutlet weak var scissorsBtn: UIButton!
+    @IBOutlet weak var checkHistoryBtn: UIButton!
     
     var selectedOption = RSPGame.SelectedOption.ROCK
+    let game = RSPGame()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,7 @@ class GameRSPViewController: UIViewController {
         let controller: ResultsRSPViewController
         controller = storyboard?.instantiateViewController(withIdentifier: "GameResultsRSPViewController") as! ResultsRSPViewController
         controller.selectedOption = RSPGame.SelectedOption.ROCK
+        controller.game = self.game
         present(controller, animated: true, completion: nil)
     }
     
@@ -47,11 +51,12 @@ class GameRSPViewController: UIViewController {
     //For Scissors Button i created an action on storyboard
     @IBAction func selectedScissors(_ sender: Any) {
         selectedOption = RSPGame.SelectedOption.SCISSOR
+        performSegue(withIdentifier: SegueIds.GAME_RESULTS, sender: nil)
     }
     
     //Let's play Btn
-    @IBAction func incorrectSegueLetsPlay(){
-       
+    @IBAction func showPlayHistory(){
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -59,6 +64,10 @@ class GameRSPViewController: UIViewController {
             //Paper btn or Scissors Btn
             let resultsRSPController = segue.destination as! ResultsRSPViewController
             resultsRSPController.selectedOption = selectedOption
+            resultsRSPController.game = self.game
+        } else if (segue.identifier == SegueIds.GAME_HISTORY){
+            let resultsRSPController = segue.destination as! HistoryViewController
+            resultsRSPController.modelRSP = self.game
         }
     }
 }

@@ -14,12 +14,16 @@ class ResultsRSPViewController: UIViewController {
     @IBOutlet weak var resultGameLabel: UILabel!
     @IBOutlet weak var imageViewResult: UIImageView!
     
-    let game = RSPGame()
+    var game : RSPGame?
     
     var selectedOption = RSPGame.SelectedOption.ROCK
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let game = self.game else {
+            return
+        }
         
         game.playRSP(playerUsing: selectedOption, systemUsing: RSPGame.SelectedOption.randomOption())
         
@@ -34,7 +38,6 @@ class ResultsRSPViewController: UIViewController {
             resultGameLabel.text = "You WIN!!!!"
             imageViewResult.image = UIImage(named: game.detailPlayed.rawValue)
         }
-        
     }
     
     @IBAction func dismissOnModal(){
