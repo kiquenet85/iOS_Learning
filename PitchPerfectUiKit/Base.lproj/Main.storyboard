@@ -554,6 +554,7 @@
                                                 </constraints>
                                                 <state key="normal" backgroundImage="scissors"/>
                                                 <connections>
+                                                    <action selector="selectedScissors:" destination="lhq-R6-UDT" eventType="touchUpInside" id="JXW-pb-DAJ"/>
                                                     <segue destination="yI2-iE-MVN" kind="presentation" identifier="GameResults" id="8x6-8G-EW7"/>
                                                 </connections>
                                             </button>
@@ -679,29 +680,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ale-Cr-Io9">
-                                <rect key="frame" x="180" y="389" width="54" height="30"/>
-                                <state key="normal" title="Dismiss"/>
-                                <connections>
-                                    <action selector="dismissOnModal" destination="yI2-iE-MVN" eventType="touchUpInside" id="jkX-gd-R6a"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="01F-SC-C0h">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9i-UP-znz">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n2H-eA-STL">
+                                        <rect key="frame" x="0.0" y="21.5" width="414" height="755"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ale-Cr-Io9">
+                                        <rect key="frame" x="0.0" y="776.5" width="414" height="31.5"/>
+                                        <state key="normal" title="Dismiss"/>
+                                        <connections>
+                                            <action selector="dismissOnModal" destination="yI2-iE-MVN" eventType="touchUpInside" id="Yab-iT-TKp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Ale-Cr-Io9" firstAttribute="centerY" secondItem="RCB-jf-lTE" secondAttribute="centerY" id="9K1-vG-Eoc"/>
-                            <constraint firstItem="Ale-Cr-Io9" firstAttribute="centerX" secondItem="RCB-jf-lTE" secondAttribute="centerX" id="L6i-54-hKP"/>
+                            <constraint firstItem="RCB-jf-lTE" firstAttribute="bottom" secondItem="01F-SC-C0h" secondAttribute="bottom" id="6td-IG-KDU"/>
+                            <constraint firstItem="01F-SC-C0h" firstAttribute="top" secondItem="RCB-jf-lTE" secondAttribute="top" id="du8-jW-xu7"/>
+                            <constraint firstItem="01F-SC-C0h" firstAttribute="leading" secondItem="RCB-jf-lTE" secondAttribute="leading" id="h8f-ax-KOS"/>
+                            <constraint firstItem="RCB-jf-lTE" firstAttribute="trailing" secondItem="01F-SC-C0h" secondAttribute="trailing" id="y1v-Ms-K5e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RCB-jf-lTE"/>
                     </view>
                     <navigationItem key="navigationItem" id="iHy-cF-YX2"/>
                     <connections>
                         <outlet property="dismissBtn" destination="Ale-Cr-Io9" id="Pqz-aa-te2"/>
+                        <outlet property="imageViewResult" destination="n2H-eA-STL" id="4xz-eF-VTJ"/>
+                        <outlet property="resultGameLabel" destination="G9i-UP-znz" id="407-Fh-Bg2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALO-Yn-jDS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="1801"/>
+            <point key="canvasLocation" x="869.56521739130437" y="1800.6696428571427"/>
         </scene>
     </scenes>
     <resources>

@@ -24,6 +24,8 @@ class GameRSPViewController: UIViewController {
     @IBOutlet weak var paperBtn: UIButton!
     @IBOutlet weak var scissorsBtn: UIButton!
     
+    var selectedOption = RSPGame.SelectedOption.ROCK
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,17 +34,20 @@ class GameRSPViewController: UIViewController {
     @IBAction func onlyCodeToShowResults(){
         let controller: ResultsRSPViewController
         controller = storyboard?.instantiateViewController(withIdentifier: "GameResultsRSPViewController") as! ResultsRSPViewController
-        controller.hideModalDismiss = false
+        controller.selectedOption = RSPGame.SelectedOption.ROCK
         present(controller, animated: true, completion: nil)
     }
     
     //Paper Button
     @IBAction func segueToShowResults(){
+        selectedOption = RSPGame.SelectedOption.PAPER
         performSegue(withIdentifier: SegueIds.GAME_RESULTS, sender: nil)
     }
     
     //For Scissors Button i created an action on storyboard
-    
+    @IBAction func selectedScissors(_ sender: Any) {
+        selectedOption = RSPGame.SelectedOption.SCISSOR
+    }
     
     //Let's play Btn
     @IBAction func incorrectSegueLetsPlay(){
@@ -53,7 +58,7 @@ class GameRSPViewController: UIViewController {
         if (segue.identifier == SegueIds.GAME_RESULTS){
             //Paper btn or Scissors Btn
             let resultsRSPController = segue.destination as! ResultsRSPViewController
-            resultsRSPController.hideModalDismiss = false
+            resultsRSPController.selectedOption = selectedOption
         }
     }
 }

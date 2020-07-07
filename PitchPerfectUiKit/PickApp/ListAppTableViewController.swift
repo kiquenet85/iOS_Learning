@@ -8,6 +8,11 @@
 
 import UIKit
 
+/**
+ Implementing a UITableView requires two delegates with 44 methods:
+ 1. UITableViewDelegate : Responses to user evenrs.
+ 2.UITableViewDataSource: Access data and cells.
+*/
 class ListAppTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     struct PhotoResources {

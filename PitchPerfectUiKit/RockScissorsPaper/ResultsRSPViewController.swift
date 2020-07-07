@@ -9,16 +9,34 @@
 import UIKit
 
 class ResultsRSPViewController: UIViewController {
-
+    
     @IBOutlet weak var dismissBtn: UIButton!
-    var hideModalDismiss = false
+    @IBOutlet weak var resultGameLabel: UILabel!
+    @IBOutlet weak var imageViewResult: UIImageView!
+    
+    let game = RSPGame()
+    
+    var selectedOption = RSPGame.SelectedOption.ROCK
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        dismissBtn.isHidden = hideModalDismiss
+        
+        game.playRSP(playerUsing: selectedOption, systemUsing: RSPGame.SelectedOption.randomOption())
+        
+        switch (game.winner) {     
+        case .PARITY:
+            resultGameLabel.text = "it's A Tie"
+            imageViewResult.image = UIImage(named: "itsATie")
+        case .SYSTEM:
+            resultGameLabel.text = "You loss"
+            imageViewResult.image = UIImage(named: game.detailPlayed.rawValue)
+        case .PLAYER:
+            resultGameLabel.text = "You WIN!!!!"
+            imageViewResult.image = UIImage(named: game.detailPlayed.rawValue)
+        }
+        
     }
-
+    
     @IBAction func dismissOnModal(){
         self.dismiss(animated: true, completion: nil)
     }

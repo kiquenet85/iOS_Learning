@@ -26,6 +26,7 @@
 		2879D52824833C630047EEB0 /* AppName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879D52724833C630047EEB0 /* AppName.swift */; };
 		2879D52A24834C570047EEB0 /* ListAppTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879D52924834C570047EEB0 /* ListAppTableViewController.swift */; };
 		2879D52E24838D3A0047EEB0 /* ClickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879D52D24838D3A0047EEB0 /* ClickViewController.swift */; };
+		288D6B9C24B2DE35000D3212 /* ModelGameRSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6B9B24B2DE35000D3212 /* ModelGameRSP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		2879D52724833C630047EEB0 /* AppName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppName.swift; sourceTree = "<group>"; };
 		2879D52924834C570047EEB0 /* ListAppTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAppTableViewController.swift; sourceTree = "<group>"; };
 		2879D52D24838D3A0047EEB0 /* ClickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickViewController.swift; sourceTree = "<group>"; };
+		288D6B9B24B2DE35000D3212 /* ModelGameRSP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelGameRSP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			children = (
 				2848125924955FEA00636198 /* GameRSPViewController.swift */,
 				2848125B2495F06F00636198 /* ResultsRSPViewController.swift */,
+				288D6B9B24B2DE35000D3212 /* ModelGameRSP.swift */,
 			);
 			path = RockScissorsPaper;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288D6B9C24B2DE35000D3212 /* ModelGameRSP.swift in Sources */,
 				2879D526248339CB0047EEB0 /* AppViewCell.swift in Sources */,
 				285ED919246FD14800A39C19 /* PlaySoundsViewController+Audio.swift in Sources */,
 				285ED905245E6D5400A39C19 /* RecordSoundViewController.swift in Sources */,
