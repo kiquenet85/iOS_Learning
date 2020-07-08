@@ -35,6 +35,18 @@ class CollectionMemeViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = false
+        
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+            self.collectionView.collectionViewLayout.invalidateLayout()
+        }
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        DispatchQueue.main.async {
+            self.collectionViewLayout.invalidateLayout()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

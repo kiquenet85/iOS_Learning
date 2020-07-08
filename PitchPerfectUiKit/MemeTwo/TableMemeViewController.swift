@@ -29,6 +29,9 @@ class TableMemeViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = false
+        DispatchQueue.main.async {
+            self.myTableView.reloadData()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

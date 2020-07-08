@@ -34,6 +34,7 @@
 		288D6BA824B4D36D000D3212 /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BA724B4D36D000D3212 /* MemeCollectionViewCell.swift */; };
 		288D6BAA24B4D4D4000D3212 /* DetailMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BA924B4D4D4000D3212 /* DetailMemeViewController.swift */; };
 		288D6BAC24B50737000D3212 /* MemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BAB24B50737000D3212 /* MemeTableViewCell.swift */; };
+		288D6BAE24B582FF000D3212 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BAD24B582FF000D3212 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		288D6BA724B4D36D000D3212 /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		288D6BA924B4D4D4000D3212 /* DetailMemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemeViewController.swift; sourceTree = "<group>"; };
 		288D6BAB24B50737000D3212 /* MemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewCell.swift; sourceTree = "<group>"; };
+		288D6BAD24B582FF000D3212 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 				288D6BA524B4D136000D3212 /* CollectionMemeViewController.swift */,
 				288D6BA724B4D36D000D3212 /* MemeCollectionViewCell.swift */,
 				288D6BA924B4D4D4000D3212 /* DetailMemeViewController.swift */,
+				288D6BAD24B582FF000D3212 /* TabBarViewController.swift */,
 			);
 			path = MemeTwo;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				284812572494A04D00636198 /* ModalsViewController.swift in Sources */,
 				288D6BAA24B4D4D4000D3212 /* DetailMemeViewController.swift in Sources */,
 				2879D52824833C630047EEB0 /* AppName.swift in Sources */,
+				288D6BAE24B582FF000D3212 /* TabBarViewController.swift in Sources */,
 				28481265249876AA00636198 /* Meme.swift in Sources */,
 				288D6BA124B4300F000D3212 /* MyHistoryPageViewController.swift in Sources */,
 				285ED901245E6D5400A39C19 /* AppDelegate.swift in Sources */,
