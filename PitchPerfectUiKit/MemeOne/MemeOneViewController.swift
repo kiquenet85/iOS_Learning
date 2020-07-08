@@ -110,7 +110,7 @@ class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     //MARK: Share Meme image.
     @objc func shareTapped(){
-        memedImg = generateMemedImage()
+        self.memedImg = generateMemedImage()
         let activityVC = UIActivityViewController(activityItems: [memedImg!], applicationActivities: [])
         activityVC.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItems?[0]
         
@@ -148,7 +148,10 @@ class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     func save() {
-        var meme = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: imgOriginal.image, memedImage: memedImg!.images?.first)
+        let meme = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: imgOriginal.image, memedImage: self.memedImg!)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memesTwo.append(meme)
     }
     
     func isHiddenNavBarAdtoolbar(hide : Bool){

@@ -28,6 +28,12 @@
 		2879D52E24838D3A0047EEB0 /* ClickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879D52D24838D3A0047EEB0 /* ClickViewController.swift */; };
 		288D6B9C24B2DE35000D3212 /* ModelGameRSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6B9B24B2DE35000D3212 /* ModelGameRSP.swift */; };
 		288D6B9E24B40137000D3212 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6B9D24B40137000D3212 /* HistoryViewController.swift */; };
+		288D6BA124B4300F000D3212 /* MyHistoryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BA024B4300F000D3212 /* MyHistoryPageViewController.swift */; };
+		288D6BA424B4CFA8000D3212 /* TableMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BA324B4CFA8000D3212 /* TableMemeViewController.swift */; };
+		288D6BA624B4D136000D3212 /* CollectionMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BA524B4D136000D3212 /* CollectionMemeViewController.swift */; };
+		288D6BA824B4D36D000D3212 /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BA724B4D36D000D3212 /* MemeCollectionViewCell.swift */; };
+		288D6BAA24B4D4D4000D3212 /* DetailMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BA924B4D4D4000D3212 /* DetailMemeViewController.swift */; };
+		288D6BAC24B50737000D3212 /* MemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BAB24B50737000D3212 /* MemeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,12 @@
 		2879D52D24838D3A0047EEB0 /* ClickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickViewController.swift; sourceTree = "<group>"; };
 		288D6B9B24B2DE35000D3212 /* ModelGameRSP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelGameRSP.swift; sourceTree = "<group>"; };
 		288D6B9D24B40137000D3212 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		288D6BA024B4300F000D3212 /* MyHistoryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHistoryPageViewController.swift; sourceTree = "<group>"; };
+		288D6BA324B4CFA8000D3212 /* TableMemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableMemeViewController.swift; sourceTree = "<group>"; };
+		288D6BA524B4D136000D3212 /* CollectionMemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionMemeViewController.swift; sourceTree = "<group>"; };
+		288D6BA724B4D36D000D3212 /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
+		288D6BA924B4D4D4000D3212 /* DetailMemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemeViewController.swift; sourceTree = "<group>"; };
+		288D6BAB24B50737000D3212 /* MemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +135,8 @@
 		285ED8FF245E6D5400A39C19 /* PitchPerfectUiKit */ = {
 			isa = PBXGroup;
 			children = (
+				288D6BA224B4CE94000D3212 /* MemeTwo */,
+				288D6B9F24B42FE3000D3212 /* MyHistory */,
 				2848125F24975BB100636198 /* MemeOne */,
 				2848125824955F9E00636198 /* RockScissorsPaper */,
 				284812552494A01200636198 /* ModalsViewController */,
@@ -182,6 +196,26 @@
 				2879D52D24838D3A0047EEB0 /* ClickViewController.swift */,
 			);
 			path = ClickCounter;
+			sourceTree = "<group>";
+		};
+		288D6B9F24B42FE3000D3212 /* MyHistory */ = {
+			isa = PBXGroup;
+			children = (
+				288D6BA024B4300F000D3212 /* MyHistoryPageViewController.swift */,
+			);
+			path = MyHistory;
+			sourceTree = "<group>";
+		};
+		288D6BA224B4CE94000D3212 /* MemeTwo */ = {
+			isa = PBXGroup;
+			children = (
+				288D6BAB24B50737000D3212 /* MemeTableViewCell.swift */,
+				288D6BA324B4CFA8000D3212 /* TableMemeViewController.swift */,
+				288D6BA524B4D136000D3212 /* CollectionMemeViewController.swift */,
+				288D6BA724B4D36D000D3212 /* MemeCollectionViewCell.swift */,
+				288D6BA924B4D4D4000D3212 /* DetailMemeViewController.swift */,
+			);
+			path = MemeTwo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,20 +293,26 @@
 				2879D526248339CB0047EEB0 /* AppViewCell.swift in Sources */,
 				285ED919246FD14800A39C19 /* PlaySoundsViewController+Audio.swift in Sources */,
 				285ED905245E6D5400A39C19 /* RecordSoundViewController.swift in Sources */,
+				288D6BA824B4D36D000D3212 /* MemeCollectionViewCell.swift in Sources */,
 				284812632498518500636198 /* MemeEditTextDelegate.swift in Sources */,
 				2848126124975BD200636198 /* MemeOneViewController.swift in Sources */,
 				2848125C2495F06F00636198 /* ResultsRSPViewController.swift in Sources */,
 				2879D52E24838D3A0047EEB0 /* ClickViewController.swift in Sources */,
+				288D6BAC24B50737000D3212 /* MemeTableViewCell.swift in Sources */,
 				284812572494A04D00636198 /* ModalsViewController.swift in Sources */,
+				288D6BAA24B4D4D4000D3212 /* DetailMemeViewController.swift in Sources */,
 				2879D52824833C630047EEB0 /* AppName.swift in Sources */,
 				28481265249876AA00636198 /* Meme.swift in Sources */,
+				288D6BA124B4300F000D3212 /* MyHistoryPageViewController.swift in Sources */,
 				285ED901245E6D5400A39C19 /* AppDelegate.swift in Sources */,
 				285ED917246E789000A39C19 /* PlaySoundViewController.swift in Sources */,
 				2848125A24955FEA00636198 /* GameRSPViewController.swift in Sources */,
+				288D6BA624B4D136000D3212 /* CollectionMemeViewController.swift in Sources */,
 				2879D52A24834C570047EEB0 /* ListAppTableViewController.swift in Sources */,
 				288D6B9E24B40137000D3212 /* HistoryViewController.swift in Sources */,
 				284812542494777B00636198 /* ColorSwitchViewController.swift in Sources */,
 				285ED903245E6D5400A39C19 /* SceneDelegate.swift in Sources */,
+				288D6BA424B4CFA8000D3212 /* TableMemeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

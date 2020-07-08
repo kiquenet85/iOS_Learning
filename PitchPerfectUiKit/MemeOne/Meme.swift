@@ -12,8 +12,8 @@ import UIKit
 struct Meme {
     var topText: String
     var bottomText: String
-    weak var originalImage: UIImage?
-    weak var memedImage : UIImage?
+    var originalImage: UIImage?
+    var memedImage : UIImage?
     
     init(topText: String, bottomText: String, originalImage: UIImage?, memedImage: UIImage?) {
         self.topText = topText

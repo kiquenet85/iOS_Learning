@@ -19,6 +19,7 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
         static let RECORD_IMG = "RecordButton"
         static let DEFAULT_PHOTO = "LowPitch"
         static let MEME_ONE = "Meme"
+        static let MEME_TWO = "jimMeme"
         static let ROCK_SCISSORS_PAPER = "ScissorsCutPaper"
     }
     
@@ -69,7 +70,7 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
         let app4 : AppName = AppName(name: AppNames.MODAL_NAVIGATION)
         let app5 : AppName = AppName(name: AppNames.ROCK_SCISSORS_PAPER, image: UIImage(named: PhotoResources.ROCK_SCISSORS_PAPER))
         let app6 : AppName = AppName(name: AppNames.MEME_1, image: UIImage(named: PhotoResources.MEME_ONE))
-        let app7 : AppName = AppName(name: AppNames.MEME_2, image: UIImage(named: PhotoResources.DEFAULT_PHOTO))
+        let app7 : AppName = AppName(name: AppNames.MEME_2, image: UIImage(named: PhotoResources.MEME_TWO))
         
         appNames += [app1, app2, app3, app4, app5, app6, app7]
     }
@@ -117,19 +118,20 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
             case AppNames.MEME_1:
                 performSegue(withIdentifier: SegueId.MEME_1, sender: nil)
             case AppNames.MEME_2:
-                //performSegue(withIdentifier: SegueId.MEME_2, sender: nil)
-                let alertcontroller = UIAlertController()
-                alertcontroller.title = "MEME 2"
-                alertcontroller.message = "NOT Implemented Yet"
-                
-                let okAction = UIAlertAction(title: "ok", style: UIAlertAction.Style.default) { action in
-                    self.dismiss(animated: true, completion: nil)
-                }
-                
-                alertcontroller.addAction(okAction)
-                present(alertcontroller, animated: true, completion: nil)
+                performSegue(withIdentifier: SegueId.MEME_2, sender: nil)
+               
             default:
                 print("Unkonwn selection.")
+                let alertcontroller = UIAlertController()
+                               alertcontroller.title = "MEME 2"
+                               alertcontroller.message = "NOT Implemented Yet"
+                               
+                               let okAction = UIAlertAction(title: "ok", style: UIAlertAction.Style.default) { action in
+                                   self.dismiss(animated: true, completion: nil)
+                               }
+                               
+                               alertcontroller.addAction(okAction)
+                               present(alertcontroller, animated: true, completion: nil)
             }
         }
     }
