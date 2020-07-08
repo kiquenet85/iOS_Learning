@@ -18,6 +18,20 @@ class CollectionMemeViewController: UICollectionViewController {
         return appDelegate.memesTwo
     }
     
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let space:CGFloat = 3.0
+        let dimensionWidth = (view.frame.size.width - (5 * space)) / 4.0
+        let dimensionHeight = (view.frame.size.height - (5 * space)) / 4.0
+        
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSize(width: dimensionWidth, height: dimensionHeight)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = false
@@ -40,7 +54,6 @@ class CollectionMemeViewController: UICollectionViewController {
         
         // Set the meme image
         cell.memeImage.image = meme.memedImage
-        cell.memeLabel.text = "\(meme.topText) \(meme.bottomText)"
         
         return cell
     }
