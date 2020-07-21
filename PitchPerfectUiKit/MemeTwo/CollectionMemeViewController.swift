@@ -23,9 +23,17 @@ class CollectionMemeViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var dimensionWidth : CGFloat
+        var dimensionHeight : CGFloat
+        
         let space:CGFloat = 3.0
-        let dimensionWidth = (view.frame.size.width - (5 * space)) / 4.0
-        let dimensionHeight = (view.frame.size.height - (5 * space)) / 4.0
+        if view.frame.size.width > view.frame.size.height {
+            dimensionWidth = (view.frame.size.width - (5 * space)) / 4.0
+            dimensionHeight = (view.frame.size.height - (2 * space)) / 2.0
+        } else {
+            dimensionWidth = (view.frame.size.width - (2 * space)) / 2.0
+            dimensionHeight = (view.frame.size.height - (5 * space)) / 4.0
+        }
         
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space

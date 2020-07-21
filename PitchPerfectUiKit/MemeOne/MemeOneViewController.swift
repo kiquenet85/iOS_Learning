@@ -23,10 +23,10 @@ class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     //MARK: Edit text variables
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
-        NSAttributedString.Key.strokeColor: UIColor.white,
-        NSAttributedString.Key.foregroundColor: UIColor.black,
+        NSAttributedString.Key.strokeColor: UIColor.black,
+        NSAttributedString.Key.foregroundColor: UIColor.white,
         NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSAttributedString.Key.strokeWidth:  6.0
+        NSAttributedString.Key.strokeWidth:  -6.0
     ]
     
     let memeEditTextDelegate = MemeEditTextDelegate()
@@ -48,16 +48,15 @@ class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, 
         shareBtn.isEnabled = false
         
         //2. Set up text fields.
-        topText.defaultTextAttributes = memeTextAttributes
-        topText.textAlignment = .center
-        topText.text = DefaultText.DEFAULT_TOP_TEXT
-        
-        bottomText.defaultTextAttributes = memeTextAttributes
-        bottomText.textAlignment = .center
-        bottomText.text = DefaultText.DEFAULT_BOTTOM_TEXT
-        
-        topText.delegate = memeEditTextDelegate
-        bottomText.delegate = memeEditTextDelegate
+        configure(textField: topText, withText: DefaultText.DEFAULT_TOP_TEXT)
+        configure(textField: bottomText, withText: DefaultText.DEFAULT_BOTTOM_TEXT)
+    }
+    
+    func configure(textField: UITextField, withText text: String) {
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.textAlignment = .center
+        textField.delegate = memeEditTextDelegate
+        textField.text = text
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -91,21 +90,21 @@ class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func pickAlbumPicture(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.allowsEditing = true
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = self
-        present(imagePicker, animated: true, completion: nil)
+        createUIImagePickerController(sourceType: UIImagePickerController.SourceType.photoLibrary)
     }
     
     @IBAction func pickAnImageFromCamera(){
         if cameraBtn.isEnabled {
-            let imagePicker = UIImagePickerController()
-            imagePicker.allowsEditing = true
-            imagePicker.sourceType = .camera
-            imagePicker.delegate = self
-            present(imagePicker, animated: true, completion: nil)
+            createUIImagePickerController(sourceType: UIImagePickerController.SourceType.camera)
         }
+    }
+    
+    func createUIImagePickerController(sourceType: UIImagePickerController.SourceType){
+        let imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = sourceType
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
     }
     
     //MARK: Share Meme image.
@@ -177,9 +176,17 @@ class MemeOneViewController: UIViewController, UIImagePickerControllerDelegate, 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    /**
+     //This line remove all observers
+     Instead of using:
+     NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+     NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+     */
     func unsubscribeFromKeyboardNotifications() {
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        NotificationCenter.default.removeObserver(self)
+        /*NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)*/
     }
     
     func getKeyboardHeight(_ notification: Notification) -> CGFloat {
