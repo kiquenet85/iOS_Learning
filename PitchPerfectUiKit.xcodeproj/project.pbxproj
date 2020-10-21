@@ -35,6 +35,8 @@
 		288D6BAA24B4D4D4000D3212 /* DetailMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BA924B4D4D4000D3212 /* DetailMemeViewController.swift */; };
 		288D6BAC24B50737000D3212 /* MemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BAB24B50737000D3212 /* MemeTableViewCell.swift */; };
 		288D6BAE24B582FF000D3212 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BAD24B582FF000D3212 /* TabBarViewController.swift */; };
+		28BB3BB625168DE000166C6D /* DogApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB3BB525168DE000166C6D /* DogApiViewController.swift */; };
+		28FAAC05251FC7F800C26399 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAAC04251FC7F800C26399 /* DogImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		288D6BA924B4D4D4000D3212 /* DetailMemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemeViewController.swift; sourceTree = "<group>"; };
 		288D6BAB24B50737000D3212 /* MemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewCell.swift; sourceTree = "<group>"; };
 		288D6BAD24B582FF000D3212 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		28BB3BB525168DE000166C6D /* DogApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogApiViewController.swift; sourceTree = "<group>"; };
+		28FAAC04251FC7F800C26399 /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 		285ED8FF245E6D5400A39C19 /* PitchPerfectUiKit */ = {
 			isa = PBXGroup;
 			children = (
+				28BB3BB425168D0B00166C6D /* DogAPI */,
 				288D6BA224B4CE94000D3212 /* MemeTwo */,
 				288D6B9F24B42FE3000D3212 /* MyHistory */,
 				2848125F24975BB100636198 /* MemeOne */,
@@ -221,6 +226,15 @@
 			path = MemeTwo;
 			sourceTree = "<group>";
 		};
+		28BB3BB425168D0B00166C6D /* DogAPI */ = {
+			isa = PBXGroup;
+			children = (
+				28BB3BB525168DE000166C6D /* DogApiViewController.swift */,
+				28FAAC04251FC7F800C26399 /* DogImage.swift */,
+			);
+			path = DogAPI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -294,6 +308,7 @@
 			files = (
 				288D6B9C24B2DE35000D3212 /* ModelGameRSP.swift in Sources */,
 				2879D526248339CB0047EEB0 /* AppViewCell.swift in Sources */,
+				28BB3BB625168DE000166C6D /* DogApiViewController.swift in Sources */,
 				285ED919246FD14800A39C19 /* PlaySoundsViewController+Audio.swift in Sources */,
 				285ED905245E6D5400A39C19 /* RecordSoundViewController.swift in Sources */,
 				288D6BA824B4D36D000D3212 /* MemeCollectionViewCell.swift in Sources */,
@@ -313,6 +328,7 @@
 				2848125A24955FEA00636198 /* GameRSPViewController.swift in Sources */,
 				288D6BA624B4D136000D3212 /* CollectionMemeViewController.swift in Sources */,
 				2879D52A24834C570047EEB0 /* ListAppTableViewController.swift in Sources */,
+				28FAAC05251FC7F800C26399 /* DogImage.swift in Sources */,
 				288D6B9E24B40137000D3212 /* HistoryViewController.swift in Sources */,
 				284812542494777B00636198 /* ColorSwitchViewController.swift in Sources */,
 				285ED903245E6D5400A39C19 /* SceneDelegate.swift in Sources */,

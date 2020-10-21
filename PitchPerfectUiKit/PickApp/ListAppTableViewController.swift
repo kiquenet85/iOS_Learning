@@ -31,6 +31,7 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
         static let ROCK_SCISSORS_PAPER = "Game RSP"
         static let MEME_1 = "Meme 1.0"
         static let MEME_2 = "Meme 2.0"
+        static let API_DOG = "API DOG"
     }
     
     struct SegueId {
@@ -41,6 +42,7 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
         static let ROCK_SCISSORS_PAPER = "clickRSP"
         static let MEME_1 = "Meme1"
         static let MEME_2 = "Meme2"
+        static let API_DOG = "apiDog"
     }
     
     let cellReuseIdentifier = "cell"
@@ -71,8 +73,9 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
         let app5 : AppName = AppName(name: AppNames.ROCK_SCISSORS_PAPER, image: UIImage(named: PhotoResources.ROCK_SCISSORS_PAPER))
         let app6 : AppName = AppName(name: AppNames.MEME_1, image: UIImage(named: PhotoResources.MEME_ONE))
         let app7 : AppName = AppName(name: AppNames.MEME_2, image: UIImage(named: PhotoResources.MEME_TWO))
+        let app8 : AppName = AppName(name: AppNames.API_DOG)
         
-        appNames += [app1, app2, app3, app4, app5, app6, app7]
+        appNames += [app1, app2, app3, app4, app5, app6, app7, app8]
     }
     
     // MARK: - Table view data source
@@ -119,6 +122,8 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
                 performSegue(withIdentifier: SegueId.MEME_1, sender: nil)
             case AppNames.MEME_2:
                 performSegue(withIdentifier: SegueId.MEME_2, sender: nil)
+            case AppNames.API_DOG:
+                performSegue(withIdentifier: SegueId.API_DOG, sender: nil)
                
             default:
                 print("Unkonwn selection.")

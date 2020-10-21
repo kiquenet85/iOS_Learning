@@ -264,6 +264,7 @@
                         <segue destination="h4j-Vo-Su4" kind="show" identifier="Meme1" id="MmI-Bc-vYU"/>
                         <segue destination="lhq-R6-UDT" kind="show" identifier="clickRSP" id="66E-Tr-g0A"/>
                         <segue destination="O1N-RO-3eh" kind="show" identifier="Meme2" id="dlL-9b-XRU"/>
+                        <segue destination="AJD-KV-VeM" kind="show" identifier="apiDog" id="gip-I0-I1m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcV-Ur-eCu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -666,7 +667,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XuW-s4-ohT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2920" y="152"/>
+            <point key="canvasLocation" x="5413" y="-982"/>
         </scene>
         <!--Memes-->
         <scene sceneID="dfW-Tc-fSM">
@@ -686,7 +687,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HfP-bt-d5c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1996" y="374"/>
+            <point key="canvasLocation" x="4519" y="-1401"/>
         </scene>
         <!--Detail Meme View Controller-->
         <scene sceneID="yKW-01-Dba">
@@ -718,7 +719,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q7b-cF-gab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3754" y="366"/>
+            <point key="canvasLocation" x="6162" y="-982"/>
+        </scene>
+        <!--Dog Api View Controller-->
+        <scene sceneID="qPE-Bg-grI">
+            <objects>
+                <viewController id="AJD-KV-VeM" customClass="DogApiViewController" customModule="PitchPerfectUiKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VYx-2V-fpJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dxo-LQ-IlH">
+                                <rect key="frame" x="20" y="98" width="374" height="756"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pY-A8-Mmo">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="155"/>
+                                        <state key="normal" title="Load DOG image"/>
+                                        <connections>
+                                            <action selector="loadRandomImg:" destination="AJD-KV-VeM" eventType="touchUpInside" id="WOb-yy-zkH"/>
+                                        </connections>
+                                    </button>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3eb-O2-aiW">
+                                        <rect key="frame" x="0.0" y="155" width="374" height="216"/>
+                                    </pickerView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HyP-B2-lfn">
+                                        <rect key="frame" x="0.0" y="371" width="374" height="385"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="385" id="vVl-ud-6RQ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dxo-LQ-IlH" firstAttribute="leading" secondItem="HB6-iD-yWY" secondAttribute="leading" constant="20" id="Wsy-3X-V3I"/>
+                            <constraint firstItem="HB6-iD-yWY" firstAttribute="trailing" secondItem="dxo-LQ-IlH" secondAttribute="trailing" constant="20" id="g30-0W-ef8"/>
+                            <constraint firstItem="HB6-iD-yWY" firstAttribute="bottom" secondItem="dxo-LQ-IlH" secondAttribute="bottom" constant="8" id="nE0-bP-Cei"/>
+                            <constraint firstItem="HB6-iD-yWY" firstAttribute="top" secondItem="dxo-LQ-IlH" secondAttribute="top" constant="-10" id="prf-0T-wAc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HB6-iD-yWY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rgG-vA-OY4"/>
+                    <connections>
+                        <outlet property="dogImg" destination="HyP-B2-lfn" id="48q-vT-7M1"/>
+                        <outlet property="loadImgBtn" destination="7pY-A8-Mmo" id="ZeJ-EA-ncJ"/>
+                        <outlet property="pickerView" destination="3eb-O2-aiW" id="lco-Ne-SYe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSb-Jw-gaZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900.0000000000002" y="1068.75"/>
         </scene>
         <!--Collection View-->
         <scene sceneID="TdT-zS-l7F">
@@ -783,7 +834,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ei-ic-jVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2900" y="846"/>
+            <point key="canvasLocation" x="4519" y="-534"/>
         </scene>
         <!--Meme One View Controller-->
         <scene sceneID="c3T-qo-7tj">
@@ -868,7 +919,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMa-Fs-AXy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2291" y="-736"/>
+            <point key="canvasLocation" x="2916" y="-1449"/>
         </scene>
         <!--ResultsRSP View Controller-->
         <scene sceneID="oLV-hz-gXs">
@@ -970,7 +1021,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RzX-Pj-zvu"/>
+        <segue reference="MmI-Bc-vYU"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Echo" width="90" height="90"/>
