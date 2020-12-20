@@ -1108,7 +1108,7 @@
                         <outlet property="loginBtn" destination="tbK-pI-NeU" id="j0L-kG-gBB"/>
                         <outlet property="userNameField" destination="YPt-38-4hu" id="CFY-Li-DUj"/>
                         <outlet property="userPasswordField" destination="4Ic-RF-VhE" id="KYv-9K-ipc"/>
-                        <segue destination="jH1-hf-d7K" kind="show" identifier="mapStudents" id="szm-aV-D0M"/>
+                        <segue destination="SMh-Rg-L3X" kind="show" identifier="mapStudents" id="uZC-x4-XNB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtE-EG-ckD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1116,36 +1116,86 @@
             </objects>
             <point key="canvasLocation" x="6302.898550724638" y="353.57142857142856"/>
         </scene>
-        <!--Login Map View Controller-->
-        <scene sceneID="1RL-DU-Zee">
+        <!--List-->
+        <scene sceneID="PPL-CG-y7n">
             <objects>
-                <viewController id="jH1-hf-d7K" customClass="LoginMapViewController" customModule="PitchPerfectUiKit" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gQL-BN-fNJ">
+                <viewController id="MU0-MV-rPF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fcl-fR-W5B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4VM-SG-x0J">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0XP-o4-e62">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0XP-o4-e62" firstAttribute="top" secondItem="HIj-ox-CM3" secondAttribute="top" id="9rR-Cb-Zvx"/>
+                            <constraint firstItem="HIj-ox-CM3" firstAttribute="bottom" secondItem="0XP-o4-e62" secondAttribute="bottom" id="IBe-nr-Tr6"/>
+                            <constraint firstItem="0XP-o4-e62" firstAttribute="leading" secondItem="HIj-ox-CM3" secondAttribute="leading" id="Wsg-zc-sKU"/>
+                            <constraint firstItem="HIj-ox-CM3" firstAttribute="trailing" secondItem="0XP-o4-e62" secondAttribute="trailing" id="rQc-XN-k4k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HIj-ox-CM3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="List" image="list.dash" catalog="system" id="qno-C8-M4M"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NRI-pL-bmH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7987" y="1049"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="9AU-1s-ItV">
+            <objects>
+                <viewController id="e0e-va-eFx" customClass="MapLocationsViewController" customModule="PitchPerfectUiKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XbP-3V-Nna">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="V2z-b3-qTK">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="gZd-oD-HQG" firstAttribute="bottom" secondItem="4VM-SG-x0J" secondAttribute="bottom" id="J1j-5F-Tpu"/>
-                            <constraint firstItem="4VM-SG-x0J" firstAttribute="leading" secondItem="gZd-oD-HQG" secondAttribute="leading" id="M6w-AD-3hT"/>
-                            <constraint firstItem="4VM-SG-x0J" firstAttribute="top" secondItem="gZd-oD-HQG" secondAttribute="top" id="fug-GL-mjl"/>
-                            <constraint firstItem="gZd-oD-HQG" firstAttribute="trailing" secondItem="4VM-SG-x0J" secondAttribute="trailing" id="xNR-V4-UnD"/>
+                            <constraint firstItem="o1d-br-qzO" firstAttribute="trailing" secondItem="V2z-b3-qTK" secondAttribute="trailing" id="7wk-aY-8C5"/>
+                            <constraint firstItem="V2z-b3-qTK" firstAttribute="top" secondItem="o1d-br-qzO" secondAttribute="top" id="Oly-vx-tfj"/>
+                            <constraint firstItem="V2z-b3-qTK" firstAttribute="leading" secondItem="o1d-br-qzO" secondAttribute="leading" id="kyF-r7-Bl2"/>
+                            <constraint firstItem="o1d-br-qzO" firstAttribute="bottom" secondItem="V2z-b3-qTK" secondAttribute="bottom" id="qer-Vc-r5V"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="gZd-oD-HQG"/>
+                        <viewLayoutGuide key="safeArea" id="o1d-br-qzO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="blU-cK-CDC"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="E59-4d-nsZ"/>
+                    <connections>
+                        <outlet property="mapView" destination="V2z-b3-qTK" id="hHI-ln-aeY"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zx4-XN-TFC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9SR-TE-Rip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7042" y="354"/>
+            <point key="canvasLocation" x="7988" y="212"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ki6-pC-Wr9">
+            <objects>
+                <tabBarController id="SMh-Rg-L3X" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ic3-wk-T7e"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aIG-6j-rB2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="e0e-va-eFx" kind="relationship" relationship="viewControllers" id="xs7-Qo-6cP"/>
+                        <segue destination="MU0-MV-rPF" kind="relationship" relationship="viewControllers" id="nfv-CU-gnc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A7Z-8a-EVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7078" y="354"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MmI-Bc-vYU"/>
+        <segue reference="RzX-Pj-zvu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Echo" width="90" height="90"/>
@@ -1158,6 +1208,8 @@
         <image name="Stop" width="155" height="155"/>
         <image name="camera" catalog="system" width="128" height="96"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="paper" width="75" height="65"/>
         <image name="rock" width="75" height="65"/>
         <image name="scissors" width="75" height="65"/>

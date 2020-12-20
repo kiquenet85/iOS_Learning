@@ -37,6 +37,7 @@
 		288D6BAE24B582FF000D3212 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BAD24B582FF000D3212 /* TabBarViewController.swift */; };
 		28BB3BB625168DE000166C6D /* DogApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB3BB525168DE000166C6D /* DogApiViewController.swift */; };
 		28EE11EA258FCC800030723A /* LoginMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11E9258FCC800030723A /* LoginMapViewController.swift */; };
+		28EE11ED258FFC210030723A /* MapLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11EC258FFC210030723A /* MapLocationsViewController.swift */; };
 		28FAAC05251FC7F800C26399 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAAC04251FC7F800C26399 /* DogImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		288D6BAD24B582FF000D3212 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		28BB3BB525168DE000166C6D /* DogApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogApiViewController.swift; sourceTree = "<group>"; };
 		28EE11E9258FCC800030723A /* LoginMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMapViewController.swift; sourceTree = "<group>"; };
+		28EE11EC258FFC210030723A /* MapLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocationsViewController.swift; sourceTree = "<group>"; };
 		28FAAC04251FC7F800C26399 /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,6 +243,7 @@
 		28EE11E5258FAE910030723A /* MapFavoriteLink */ = {
 			isa = PBXGroup;
 			children = (
+				28EE11EB258FF9460030723A /* listLocations */,
 				28EE11E8258FCABB0030723A /* mapLocations */,
 				28EE11E7258FCAB00030723A /* login */,
 				28EE11E6258FCA9E0030723A /* data */,
@@ -266,8 +269,16 @@
 		28EE11E8258FCABB0030723A /* mapLocations */ = {
 			isa = PBXGroup;
 			children = (
+				28EE11EC258FFC210030723A /* MapLocationsViewController.swift */,
 			);
 			path = mapLocations;
+			sourceTree = "<group>";
+		};
+		28EE11EB258FF9460030723A /* listLocations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = listLocations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +361,7 @@
 				284812632498518500636198 /* MemeEditTextDelegate.swift in Sources */,
 				2848126124975BD200636198 /* MemeOneViewController.swift in Sources */,
 				2848125C2495F06F00636198 /* ResultsRSPViewController.swift in Sources */,
+				28EE11ED258FFC210030723A /* MapLocationsViewController.swift in Sources */,
 				2879D52E24838D3A0047EEB0 /* ClickViewController.swift in Sources */,
 				288D6BAC24B50737000D3212 /* MemeTableViewCell.swift in Sources */,
 				284812572494A04D00636198 /* ModalsViewController.swift in Sources */,
