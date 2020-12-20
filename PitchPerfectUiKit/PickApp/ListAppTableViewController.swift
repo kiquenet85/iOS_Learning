@@ -32,6 +32,7 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
         static let MEME_1 = "Meme 1.0"
         static let MEME_2 = "Meme 2.0"
         static let API_DOG = "API DOG"
+        static let MAP_VIEW = "Map favorite subject"
     }
     
     struct SegueId {
@@ -43,6 +44,7 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
         static let MEME_1 = "Meme1"
         static let MEME_2 = "Meme2"
         static let API_DOG = "apiDog"
+        static let MAP_VIEW = "mapFavorite"
     }
     
     let cellReuseIdentifier = "cell"
@@ -74,8 +76,9 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
         let app6 : AppName = AppName(name: AppNames.MEME_1, image: UIImage(named: PhotoResources.MEME_ONE))
         let app7 : AppName = AppName(name: AppNames.MEME_2, image: UIImage(named: PhotoResources.MEME_TWO))
         let app8 : AppName = AppName(name: AppNames.API_DOG)
+        let app9 : AppName = AppName(name: AppNames.MAP_VIEW)
         
-        appNames += [app1, app2, app3, app4, app5, app6, app7, app8]
+        appNames += [app1, app2, app3, app4, app5, app6, app7, app8, app9]
     }
     
     // MARK: - Table view data source
@@ -124,6 +127,8 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
                 performSegue(withIdentifier: SegueId.MEME_2, sender: nil)
             case AppNames.API_DOG:
                 performSegue(withIdentifier: SegueId.API_DOG, sender: nil)
+            case AppNames.MAP_VIEW:
+                performSegue(withIdentifier: SegueId.MAP_VIEW, sender: nil)
                
             default:
                 print("Unkonwn selection.")
