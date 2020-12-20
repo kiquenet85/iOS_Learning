@@ -128,15 +128,15 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
             default:
                 print("Unkonwn selection.")
                 let alertcontroller = UIAlertController()
-                               alertcontroller.title = "MEME 2"
-                               alertcontroller.message = "NOT Implemented Yet"
-                               
-                               let okAction = UIAlertAction(title: "ok", style: UIAlertAction.Style.default) { action in
-                                   self.dismiss(animated: true, completion: nil)
-                               }
-                               
-                               alertcontroller.addAction(okAction)
-                               present(alertcontroller, animated: true, completion: nil)
+                alertcontroller.title = "MEME 2"
+                alertcontroller.message = "NOT Implemented Yet"
+                
+                let okAction = UIAlertAction(title: "ok", style: UIAlertAction.Style.default) { action in
+                    self.dismiss(animated: true, completion: nil)
+                }
+                
+                alertcontroller.addAction(okAction)
+                present(alertcontroller, animated: true, completion: nil)
             }
         }
     }

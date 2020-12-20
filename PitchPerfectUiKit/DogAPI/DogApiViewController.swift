@@ -19,6 +19,8 @@ class DogApiViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.pickerView.delegate = self
+        self.pickerView.dataSource = self
         loadBreeedNames()
     }
     
@@ -34,8 +36,7 @@ class DogApiViewController: UIViewController {
                 let dogBreed = try decoder.decode(DogBreed.self, from: data)
                 DogApiViewController.breedDogList = dogBreed.breeds
                 DispatchQueue.main.async {
-                    self.pickerView.delegate = self
-                    self.pickerView.dataSource = self
+                    self.pickerView.reloadAllComponents()
                 }
             } catch {
                 print(error)
