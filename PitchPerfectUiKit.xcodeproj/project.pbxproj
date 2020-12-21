@@ -48,6 +48,7 @@
 		28EE1203259049F00030723A /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE1202259049F00030723A /* UserLocation.swift */; };
 		28EE120525904AFB0030723A /* UserLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE120425904AFB0030723A /* UserLocationResponse.swift */; };
 		28EE120725913AE20030723A /* MapListLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE120625913AE20030723A /* MapListLocationsViewController.swift */; };
+		28EE120A25914D7C0030723A /* CreatePinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE120925914D7C0030723A /* CreatePinViewController.swift */; };
 		28FAAC05251FC7F800C26399 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAAC04251FC7F800C26399 /* DogImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		28EE1202259049F00030723A /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		28EE120425904AFB0030723A /* UserLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationResponse.swift; sourceTree = "<group>"; };
 		28EE120625913AE20030723A /* MapListLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListLocationsViewController.swift; sourceTree = "<group>"; };
+		28EE120925914D7C0030723A /* CreatePinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePinViewController.swift; sourceTree = "<group>"; };
 		28FAAC04251FC7F800C26399 /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -263,6 +265,7 @@
 		28EE11E5258FAE910030723A /* MapFavoriteLink */ = {
 			isa = PBXGroup;
 			children = (
+				28EE120825914D620030723A /* Create Pin */,
 				28EE1201259049D90030723A /* Model */,
 				28EE11EB258FF9460030723A /* List Locations */,
 				28EE11E8258FCABB0030723A /* Map Locations */,
@@ -341,6 +344,14 @@
 				28EE1202259049F00030723A /* UserLocation.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		28EE120825914D620030723A /* Create Pin */ = {
+			isa = PBXGroup;
+			children = (
+				28EE120925914D7C0030723A /* CreatePinViewController.swift */,
+			);
+			path = "Create Pin";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +443,7 @@
 				2848125C2495F06F00636198 /* ResultsRSPViewController.swift in Sources */,
 				28EE11ED258FFC210030723A /* MapViewController.swift in Sources */,
 				2879D52E24838D3A0047EEB0 /* ClickViewController.swift in Sources */,
+				28EE120A25914D7C0030723A /* CreatePinViewController.swift in Sources */,
 				288D6BAC24B50737000D3212 /* MemeTableViewCell.swift in Sources */,
 				284812572494A04D00636198 /* ModalsViewController.swift in Sources */,
 				28EE11FE25901DD50030723A /* MapLoginViewController.swift in Sources */,

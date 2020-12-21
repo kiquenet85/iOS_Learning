@@ -1198,6 +1198,22 @@
             </objects>
             <point key="canvasLocation" x="7988" y="212"/>
         </scene>
+        <!--Create Pin View Controller-->
+        <scene sceneID="hF8-e6-Tao">
+            <objects>
+                <viewController id="Dvs-ys-WmQ" customClass="CreatePinViewController" customModule="PitchPerfectUiKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sxG-Eh-5a6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tFC-Wd-laY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5gc-wb-bM9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0b-eY-rbm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8926" y="970"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ki6-pC-Wr9">
             <objects>
@@ -1211,6 +1227,7 @@
                     <connections>
                         <segue destination="e0e-va-eFx" kind="relationship" relationship="viewControllers" id="xs7-Qo-6cP"/>
                         <segue destination="MU0-MV-rPF" kind="relationship" relationship="viewControllers" id="nfv-CU-gnc"/>
+                        <segue destination="Dvs-ys-WmQ" kind="show" identifier="searchAddressSegueId" id="2Xd-ta-Cpq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7Z-8a-EVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

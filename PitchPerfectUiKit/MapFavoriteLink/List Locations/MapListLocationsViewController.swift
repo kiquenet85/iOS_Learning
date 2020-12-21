@@ -16,8 +16,6 @@ class MapListLocationsViewController: UIViewController, UITableViewDelegate, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Location Favorite List";
-        
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -54,5 +52,4 @@ class MapListLocationsViewController: UIViewController, UITableViewDelegate, UIT
             }
         }
     }
-    
 }

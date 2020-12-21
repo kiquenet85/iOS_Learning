@@ -12,6 +12,7 @@ import MapKit
 class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
+    let searchAddressSegueId = "searchAddressSegueId"
     
     var locations : [UserLocation] = []
     var annotations = [MKPointAnnotation]()
@@ -31,6 +32,20 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
         
         self.mapView.delegate = self;
+        
+        setUpBarButtonItems()
+    }
+    
+    fileprivate func setUpBarButtonItems() {
+        self.tabBarController!.navigationItem.title = "Student Locations";
+        let image = UIImage(systemName: "mappin.and.ellipse")?.withRenderingMode(.alwaysOriginal)
+        let button = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(onPinTapped))
+        self.tabBarController!.navigationItem.leftBarButtonItems = [button]
+        button.isEnabled = true
+    }
+    
+    @objc func onPinTapped(){
+        self.tabBarController!.performSegue(withIdentifier: searchAddressSegueId, sender: nil)
     }
     
     func fillMapWithData(){
