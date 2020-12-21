@@ -1198,17 +1198,83 @@
             </objects>
             <point key="canvasLocation" x="7988" y="212"/>
         </scene>
-        <!--Create Pin View Controller-->
+        <!--Address Pin View Controller-->
         <scene sceneID="hF8-e6-Tao">
             <objects>
-                <viewController id="Dvs-ys-WmQ" customClass="CreatePinViewController" customModule="PitchPerfectUiKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dvs-ys-WmQ" customClass="AddressPinViewController" customModule="PitchPerfectUiKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sxG-Eh-5a6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G5P-hc-nUk">
+                                <rect key="frame" x="16" y="104" width="382" height="742"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where are you studying today?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4g-Mh-gQh">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="OJF-4e-h71"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your address location here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdX-uR-SC3">
+                                        <rect key="frame" x="0.0" y="32" width="382" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="VyV-o9-MUC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Dhx-R5-Rxw">
+                                        <rect key="frame" x="0.0" y="64" width="382" height="593.5"/>
+                                    </mapView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a Link to Share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vs-cc-g0H">
+                                        <rect key="frame" x="0.0" y="657.5" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the link fto sare here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qfc-WL-au5">
+                                        <rect key="frame" x="0.0" y="678" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7PJ-N9-c2c">
+                                        <rect key="frame" x="0.0" y="712" width="382" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3a-yL-Odr">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="30"/>
+                                                <state key="normal" title="Find On  Map"/>
+                                                <connections>
+                                                    <action selector="onFindMapClicked:" destination="Dvs-ys-WmQ" eventType="touchUpInside" id="9mG-tD-6Oa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5H-fw-vih">
+                                                <rect key="frame" x="172" y="0.0" width="210" height="30"/>
+                                                <state key="normal" title="Submit Location"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="G5P-hc-nUk" firstAttribute="top" secondItem="tFC-Wd-laY" secondAttribute="top" constant="16" id="28P-Zv-zsi"/>
+                            <constraint firstItem="tFC-Wd-laY" firstAttribute="trailing" secondItem="G5P-hc-nUk" secondAttribute="trailing" constant="16" id="djP-81-hEl"/>
+                            <constraint firstItem="tFC-Wd-laY" firstAttribute="bottom" secondItem="G5P-hc-nUk" secondAttribute="bottom" constant="16" id="xrf-Xq-ZjA"/>
+                            <constraint firstItem="G5P-hc-nUk" firstAttribute="leading" secondItem="tFC-Wd-laY" secondAttribute="leading" constant="16" id="zV2-PC-ssy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tFC-Wd-laY"/>
                     </view>
                     <navigationItem key="navigationItem" id="5gc-wb-bM9"/>
+                    <connections>
+                        <outlet property="addressField" destination="vdX-uR-SC3" id="mDP-H4-TG0"/>
+                        <outlet property="buttonFindOnMap" destination="c3a-yL-Odr" id="IkR-FD-JJM"/>
+                        <outlet property="buttonSubmit" destination="c5H-fw-vih" id="2VF-pB-FJ8"/>
+                        <outlet property="mapView" destination="Dhx-R5-Rxw" id="dZt-yQ-iLC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0b-eY-rbm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
