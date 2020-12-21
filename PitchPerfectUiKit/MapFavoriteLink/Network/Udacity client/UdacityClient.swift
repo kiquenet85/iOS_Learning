@@ -42,6 +42,7 @@ class UdacityClient {
             
             DispatchQueue.main.async {
                 if response != nil{
+                    Auth.sessionId = response!.session.id!
                     completion(true, nil)
                 } else {
                     completion(false, error)
@@ -71,7 +72,12 @@ class UdacityClient {
                 let responseObject = try decoder.decode(ResponseType.self, from: newData)
                 completion(responseObject, nil)
             } catch {
-                completion(nil, error)
+                do {
+                    let responseErrorObject = try decoder.decode(CommonResponse.self, from: newData)
+                    completion(nil, responseErrorObject)
+                } catch {
+                    completion(nil, error)
+                }
             }
         }
         task.resume()
@@ -109,7 +115,12 @@ class UdacityClient {
                 let responsePostObject = try decoder.decode(ResponseType.self, from: newData)
                 completion(responsePostObject, nil)
             } catch {
-                completion(nil, error)
+                do {
+                    let responseErrorObject = try decoder.decode(CommonResponse.self, from: newData)
+                    completion(nil, responseErrorObject)
+                } catch {
+                    completion(nil, error)
+                }
             }
         }.resume()
     }
@@ -135,8 +146,20 @@ class UdacityClient {
                 completion(nil, error)
                 return
             }
+            let range = 5..<data!.count
+            let newData = data!.subdata(in: range)
             
-            completion(nil, error)
+            let decoder = JSONDecoder()
+            do {
+                let commonResponse = try decoder.decode(CommonResponse.self, from: newData)
+                if (commonResponse.status == 200){
+                    completion(nil, commonResponse)
+                } else {
+                    completion(nil, commonResponse)
+                }
+            } catch {
+                completion(nil, error)
+            }
         }.resume()
     }
 }

@@ -44,6 +44,7 @@
 		28EE11FA2590087A0030723A /* AccountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11F92590087A0030723A /* AccountDTO.swift */; };
 		28EE11FC259008C30030723A /* SessionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11FB259008C30030723A /* SessionDTO.swift */; };
 		28EE11FE25901DD50030723A /* MapLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11FD25901DD50030723A /* MapLoginViewController.swift */; };
+		28EE1200259030320030723A /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11FF259030320030723A /* CommonResponse.swift */; };
 		28FAAC05251FC7F800C26399 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAAC04251FC7F800C26399 /* DogImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		28EE11F92590087A0030723A /* AccountDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDTO.swift; sourceTree = "<group>"; };
 		28EE11FB259008C30030723A /* SessionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDTO.swift; sourceTree = "<group>"; };
 		28EE11FD25901DD50030723A /* MapLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLoginViewController.swift; sourceTree = "<group>"; };
+		28EE11FF259030320030723A /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
 		28FAAC04251FC7F800C26399 /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -319,6 +321,7 @@
 				28EE11F3259007030030723A /* UdacityLoginResponse.swift */,
 				28EE11F92590087A0030723A /* AccountDTO.swift */,
 				28EE11FB259008C30030723A /* SessionDTO.swift */,
+				28EE11FF259030320030723A /* CommonResponse.swift */,
 			);
 			path = "Udacity Response";
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				28EE11F02590011A0030723A /* UdacityClient.swift in Sources */,
 				284812542494777B00636198 /* ColorSwitchViewController.swift in Sources */,
 				285ED903245E6D5400A39C19 /* SceneDelegate.swift in Sources */,
+				28EE1200259030320030723A /* CommonResponse.swift in Sources */,
 				288D6BA424B4CFA8000D3212 /* TableMemeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
