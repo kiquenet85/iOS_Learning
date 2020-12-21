@@ -36,7 +36,6 @@
 		288D6BAC24B50737000D3212 /* MemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BAB24B50737000D3212 /* MemeTableViewCell.swift */; };
 		288D6BAE24B582FF000D3212 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6BAD24B582FF000D3212 /* TabBarViewController.swift */; };
 		28BB3BB625168DE000166C6D /* DogApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB3BB525168DE000166C6D /* DogApiViewController.swift */; };
-		28EE11EA258FCC800030723A /* LoginMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11E9258FCC800030723A /* LoginMapViewController.swift */; };
 		28EE11ED258FFC210030723A /* MapLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11EC258FFC210030723A /* MapLocationsViewController.swift */; };
 		28EE11F02590011A0030723A /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11EF2590011A0030723A /* UdacityClient.swift */; };
 		28EE11F4259007030030723A /* UdacityLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11F3259007030030723A /* UdacityLoginResponse.swift */; };
@@ -44,6 +43,7 @@
 		28EE11F8259007A00030723A /* UdacityDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11F7259007A00030723A /* UdacityDTO.swift */; };
 		28EE11FA2590087A0030723A /* AccountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11F92590087A0030723A /* AccountDTO.swift */; };
 		28EE11FC259008C30030723A /* SessionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11FB259008C30030723A /* SessionDTO.swift */; };
+		28EE11FE25901DD50030723A /* MapLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11FD25901DD50030723A /* MapLoginViewController.swift */; };
 		28FAAC05251FC7F800C26399 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAAC04251FC7F800C26399 /* DogImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +79,6 @@
 		288D6BAB24B50737000D3212 /* MemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewCell.swift; sourceTree = "<group>"; };
 		288D6BAD24B582FF000D3212 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		28BB3BB525168DE000166C6D /* DogApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogApiViewController.swift; sourceTree = "<group>"; };
-		28EE11E9258FCC800030723A /* LoginMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMapViewController.swift; sourceTree = "<group>"; };
 		28EE11EC258FFC210030723A /* MapLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocationsViewController.swift; sourceTree = "<group>"; };
 		28EE11EF2590011A0030723A /* UdacityClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
 		28EE11F3259007030030723A /* UdacityLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityLoginResponse.swift; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		28EE11F7259007A00030723A /* UdacityDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityDTO.swift; sourceTree = "<group>"; };
 		28EE11F92590087A0030723A /* AccountDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDTO.swift; sourceTree = "<group>"; };
 		28EE11FB259008C30030723A /* SessionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDTO.swift; sourceTree = "<group>"; };
+		28EE11FD25901DD50030723A /* MapLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLoginViewController.swift; sourceTree = "<group>"; };
 		28FAAC04251FC7F800C26399 /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -276,7 +276,7 @@
 		28EE11E7258FCAB00030723A /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				28EE11E9258FCC800030723A /* LoginMapViewController.swift */,
+				28EE11FD25901DD50030723A /* MapLoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -411,6 +411,7 @@
 				2879D52E24838D3A0047EEB0 /* ClickViewController.swift in Sources */,
 				288D6BAC24B50737000D3212 /* MemeTableViewCell.swift in Sources */,
 				284812572494A04D00636198 /* ModalsViewController.swift in Sources */,
+				28EE11FE25901DD50030723A /* MapLoginViewController.swift in Sources */,
 				288D6BAA24B4D4D4000D3212 /* DetailMemeViewController.swift in Sources */,
 				2879D52824833C630047EEB0 /* AppName.swift in Sources */,
 				288D6BAE24B582FF000D3212 /* TabBarViewController.swift in Sources */,
@@ -426,7 +427,6 @@
 				288D6B9E24B40137000D3212 /* HistoryViewController.swift in Sources */,
 				28EE11F02590011A0030723A /* UdacityClient.swift in Sources */,
 				284812542494777B00636198 /* ColorSwitchViewController.swift in Sources */,
-				28EE11EA258FCC800030723A /* LoginMapViewController.swift in Sources */,
 				285ED903245E6D5400A39C19 /* SceneDelegate.swift in Sources */,
 				288D6BA424B4CFA8000D3212 /* TableMemeViewController.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  LoginMapViewController.swift
+//  MapLoginViewController.swift
 //  PitchPerfectUiKit
 //
 //  Created by Nestor Diazgranados on 12/20/20.
@@ -8,24 +8,24 @@
 
 import UIKit
 
-class LoginMapViewController: UIViewController {
+class MapLoginViewController: UIViewController {
     
     let MAP_SCREEN_SEGUE = "mapStudents"
     
-    @IBOutlet weak var userNameField: UITextField!
-    @IBOutlet weak var userPasswordField: UITextField!
-    @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var mapUser: UITextField!
+    @IBOutlet weak var mapPassword: UITextField!
+    @IBOutlet weak var mapBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        userNameField.text = ""
-        userPasswordField.text = ""
+        mapUser.text = ""
+        mapPassword.text = ""
     }
     
-    @IBAction func onLoginClicked(_ sender: Any) {
-        UdacityClient.login(userNameField.text!, userPasswordField.text!){
+    @IBAction func onLoginBtnClicked(_ sender: Any) {
+        UdacityClient.login(mapUser.text!, mapPassword.text!){
             (success, error) in
             
             if success {
@@ -52,3 +52,4 @@ class LoginMapViewController: UIViewController {
     }
     
 }
+

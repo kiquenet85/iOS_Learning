@@ -9,6 +9,6 @@
 import Foundation
 
 struct UdacityDTO : Codable {
-    let name: String
+    let username: String
     let password: String
 }

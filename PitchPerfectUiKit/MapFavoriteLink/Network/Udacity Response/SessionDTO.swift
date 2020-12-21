@@ -9,6 +9,6 @@
 import Foundation
 
 struct SessionDTO: Codable {
-    let id: String
-    let expiration: String
+    let id: String?
+    let expiration: String?
 }

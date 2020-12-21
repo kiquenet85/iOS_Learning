@@ -9,6 +9,6 @@
 import Foundation
 
 struct AccountDTO: Codable {
-    let registered: String
-    let key: String
+    let registered: Bool?
+    let key: String?
 }
