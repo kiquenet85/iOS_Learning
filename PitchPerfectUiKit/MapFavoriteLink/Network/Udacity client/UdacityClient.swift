@@ -19,18 +19,34 @@ class UdacityClient {
         static let base = "https://onthemap-api.udacity.com/v1"
         
         case login
+        case getLocations
         
         
         var stringValue: String {
             switch self {
                 
             case .login: return Endpoints.base + "/session"
+            case .getLocations: return Endpoints.base + "/StudentLocation?limit=100"
                 
             }
         }
         
         var url: URL {
             return URL(string: stringValue)!
+        }
+    }
+    
+    class func getLocations(completion: @escaping ([UserLocation]?, Error?) -> Void) {
+        taskForGetRequest(url: Endpoints.getLocations.url, response: UserLocationResponse.self) {
+            (userLocationResponse, error) in
+            
+            DispatchQueue.main.async {
+                if userLocationResponse != nil{
+                    completion(userLocationResponse?.results, nil)
+                } else {
+                    completion(nil, error)
+                }
+            }
         }
     }
     
@@ -64,16 +80,18 @@ class UdacityClient {
                 return
             }
             
-            let range = 5..<data.count
-            let newData = data.subdata(in: range)
+            /*let range = 5..<data.count
+            let newData = data.subdata(in: range)*/
             
+            
+            print(String(data: data, encoding: .utf8)!)
             let decoder = JSONDecoder()
             do {
-                let responseObject = try decoder.decode(ResponseType.self, from: newData)
+                let responseObject = try decoder.decode(ResponseType.self, from: data)
                 completion(responseObject, nil)
             } catch {
                 do {
-                    let responseErrorObject = try decoder.decode(CommonResponse.self, from: newData)
+                    let responseErrorObject = try decoder.decode(CommonResponse.self, from: data)
                     completion(nil, responseErrorObject)
                 } catch {
                     completion(nil, error)

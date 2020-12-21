@@ -45,6 +45,8 @@
 		28EE11FC259008C30030723A /* SessionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11FB259008C30030723A /* SessionDTO.swift */; };
 		28EE11FE25901DD50030723A /* MapLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11FD25901DD50030723A /* MapLoginViewController.swift */; };
 		28EE1200259030320030723A /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE11FF259030320030723A /* CommonResponse.swift */; };
+		28EE1203259049F00030723A /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE1202259049F00030723A /* UserLocation.swift */; };
+		28EE120525904AFB0030723A /* UserLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE120425904AFB0030723A /* UserLocationResponse.swift */; };
 		28FAAC05251FC7F800C26399 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAAC04251FC7F800C26399 /* DogImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,8 @@
 		28EE11FB259008C30030723A /* SessionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDTO.swift; sourceTree = "<group>"; };
 		28EE11FD25901DD50030723A /* MapLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLoginViewController.swift; sourceTree = "<group>"; };
 		28EE11FF259030320030723A /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
+		28EE1202259049F00030723A /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		28EE120425904AFB0030723A /* UserLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationResponse.swift; sourceTree = "<group>"; };
 		28FAAC04251FC7F800C26399 /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,6 +261,7 @@
 		28EE11E5258FAE910030723A /* MapFavoriteLink */ = {
 			isa = PBXGroup;
 			children = (
+				28EE1201259049D90030723A /* Model */,
 				28EE11EB258FF9460030723A /* List Locations */,
 				28EE11E8258FCABB0030723A /* Map Locations */,
 				28EE11E7258FCAB00030723A /* Login */,
@@ -322,8 +327,17 @@
 				28EE11F92590087A0030723A /* AccountDTO.swift */,
 				28EE11FB259008C30030723A /* SessionDTO.swift */,
 				28EE11FF259030320030723A /* CommonResponse.swift */,
+				28EE120425904AFB0030723A /* UserLocationResponse.swift */,
 			);
 			path = "Udacity Response";
+			sourceTree = "<group>";
+		};
+		28EE1201259049D90030723A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				28EE1202259049F00030723A /* UserLocation.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,9 +416,11 @@
 				28EE11F4259007030030723A /* UdacityLoginResponse.swift in Sources */,
 				28EE11FC259008C30030723A /* SessionDTO.swift in Sources */,
 				28BB3BB625168DE000166C6D /* DogApiViewController.swift in Sources */,
+				28EE120525904AFB0030723A /* UserLocationResponse.swift in Sources */,
 				28EE11F8259007A00030723A /* UdacityDTO.swift in Sources */,
 				285ED919246FD14800A39C19 /* PlaySoundsViewController+Audio.swift in Sources */,
 				285ED905245E6D5400A39C19 /* RecordSoundViewController.swift in Sources */,
+				28EE1203259049F00030723A /* UserLocation.swift in Sources */,
 				288D6BA824B4D36D000D3212 /* MemeCollectionViewCell.swift in Sources */,
 				284812632498518500636198 /* MemeEditTextDelegate.swift in Sources */,
 				2848126124975BD200636198 /* MemeOneViewController.swift in Sources */,
