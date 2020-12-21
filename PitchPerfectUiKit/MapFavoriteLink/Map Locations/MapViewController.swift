@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapLocationsViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -34,6 +34,7 @@ class MapLocationsViewController: UIViewController, MKMapViewDelegate {
     }
     
     func fillMapWithData(){
+        shareDataWithTabControllerListTab()
         for userLocation in self.locations {
             // Notice that the float values are being used to create CLLocationDegree values.
             // This is a version of the Double type.
@@ -57,6 +58,11 @@ class MapLocationsViewController: UIViewController, MKMapViewDelegate {
             self.annotations.append(annotation)
         }
         self.mapView.addAnnotations(annotations)
+    }
+    
+    func shareDataWithTabControllerListTab(){
+        let listTabController = self.tabBarController!.viewControllers![1] as! MapListLocationsViewController
+        listTabController.locations = self.locations
     }
     
     // MARK: - MKMapViewDelegate
