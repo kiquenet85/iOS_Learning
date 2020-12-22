@@ -133,7 +133,7 @@ class ListAppTableViewController: UIViewController, UITableViewDelegate, UITable
             default:
                 print("Unkonwn selection.")
                 let alertcontroller = UIAlertController()
-                alertcontroller.title = "MEME 2"
+                alertcontroller.title = "APP NOT FOUND"
                 alertcontroller.message = "NOT Implemented Yet"
                 
                 let okAction = UIAlertAction(title: "ok", style: UIAlertAction.Style.default) { action in

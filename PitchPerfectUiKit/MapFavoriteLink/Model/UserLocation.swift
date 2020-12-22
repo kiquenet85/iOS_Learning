@@ -16,7 +16,11 @@ struct UserLocation: Codable {
     let mapString: String
     let mediaURL: String
     let uniqueKey: String
-    let objectId: String
-    let createdAt: String
-    let updatedAt: String
+    let objectId: String?
+    let createdAt: String? = nil
+    let updatedAt: String? = nil
+    
+    func getUserLocationWithUserAuthInfo(authUniqueKey: String, currentObjectId: String) -> UserLocation {
+        return UserLocation(firstName: self.firstName, lastName: self.lastName, longitude: self.longitude, latitude: self.latitude, mapString: self.mapString, mediaURL: self.mediaURL, uniqueKey: authUniqueKey, objectId: currentObjectId)
+    }
 }

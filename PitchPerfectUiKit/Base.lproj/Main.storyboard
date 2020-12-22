@@ -1226,20 +1226,20 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Dhx-R5-Rxw">
-                                        <rect key="frame" x="0.0" y="64" width="382" height="593.5"/>
-                                    </mapView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a Link to Share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vs-cc-g0H">
-                                        <rect key="frame" x="0.0" y="657.5" width="382" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="64" width="382" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the link fto sare here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qfc-WL-au5">
-                                        <rect key="frame" x="0.0" y="678" width="382" height="34"/>
+                                        <rect key="frame" x="0.0" y="84.5" width="382" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Dhx-R5-Rxw">
+                                        <rect key="frame" x="0.0" y="118.5" width="382" height="593.5"/>
+                                    </mapView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7PJ-N9-c2c">
                                         <rect key="frame" x="0.0" y="712" width="382" height="30"/>
                                         <subviews>
@@ -1253,6 +1253,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5H-fw-vih">
                                                 <rect key="frame" x="172" y="0.0" width="210" height="30"/>
                                                 <state key="normal" title="Submit Location"/>
+                                                <connections>
+                                                    <action selector="onSubmitClicked:" destination="Dvs-ys-WmQ" eventType="touchUpInside" id="FIl-UN-phg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1273,6 +1276,7 @@
                         <outlet property="addressField" destination="vdX-uR-SC3" id="mDP-H4-TG0"/>
                         <outlet property="buttonFindOnMap" destination="c3a-yL-Odr" id="IkR-FD-JJM"/>
                         <outlet property="buttonSubmit" destination="c5H-fw-vih" id="2VF-pB-FJ8"/>
+                        <outlet property="linkField" destination="Qfc-WL-au5" id="lIU-Ph-eTx"/>
                         <outlet property="mapView" destination="Dhx-R5-Rxw" id="dZt-yQ-iLC"/>
                     </connections>
                 </viewController>
